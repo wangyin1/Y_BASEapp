@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link rel="stylesheet" href="http://*****/skin/common/bootstrap/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+.box_u{list-style-type: none; margin: 0; padding: 0; width: 98%; overflow: hidden}
+</style>
+<body >
+<div class="container">
+***
+</div>
+</body>
+</html>
