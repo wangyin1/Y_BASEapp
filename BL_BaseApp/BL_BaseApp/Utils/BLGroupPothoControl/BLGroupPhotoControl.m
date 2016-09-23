@@ -171,11 +171,12 @@ Image_(addIconImage);
         [muImages removeLastObject];
     }
     if ([self.images.firstObject isKindOfClass:[NSString class]]) {
-        [HUPhotoBrowser showFromImageView:cell.contentView.subviews.lastObject withURLStrings:muImages placeholderImage:nil atIndex:indexPath.row dismiss:^(UIImage *image, NSInteger index) {
+        
+        [HUPhotoBrowser showFromImageView:cell.contentView.subviews.firstObject withURLStrings:muImages placeholderImage:nil atIndex:indexPath.row dismiss:^(UIImage *image, NSInteger index) {
             
         }];
     }else{
-    [HUPhotoBrowser showFromImageView:cell.contentView.subviews.lastObject withImages:muImages placeholderImage:nil atIndex:indexPath.row dismiss:^(UIImage *image, NSInteger index) {
+    [HUPhotoBrowser showFromImageView:cell.contentView.subviews.firstObject withImages:muImages placeholderImage:nil atIndex:indexPath.row dismiss:^(UIImage *image, NSInteger index) {
         
     }];
     }

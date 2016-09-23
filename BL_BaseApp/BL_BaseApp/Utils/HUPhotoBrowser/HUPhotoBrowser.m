@@ -118,27 +118,38 @@
         [wself dismiss];
     };
     if (self.URLStrings) {
-        NSURL *url = [NSURL URLWithString:self.URLStrings[indexPath.row]];
-        if (indexPath.row != _index) {
         
-            [cell.imageView sd_setImageWithURL:url placeholderImage:_placeholderImage];
+        NSURL *url;
+        if ([self.URLStrings[indexPath.row] isKindOfClass:[NSString class]]) {
+            url = [NSURL URLWithString:self.URLStrings[indexPath.row]];
+        }else{
+            cell.imageView.image = self.URLStrings[indexPath.row];
         }
-        else {
-            UIImage *placeHolder = _tmpImageView.image;
-            [cell.imageView sd_setImageWithURL:url placeholderImage:placeHolder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                if (image) {
-                    if (!_imageDidLoaded) {
-                        _imageDidLoaded = YES;
-                        if (_animationCompleted) {
-                            self.collectionView.hidden = NO;
-                            [_tmpImageView removeFromSuperview];
-                            _animationCompleted = NO;
+        
+        if (url) {
+            if (indexPath.row != _index) {
+                
+                [cell.imageView sd_setImageWithURL:url placeholderImage:_placeholderImage];
+            }
+            else {
+                UIImage *placeHolder = _tmpImageView.image;
+                [cell.imageView sd_setImageWithURL:url placeholderImage:placeHolder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                    if (image) {
+                        if (!_imageDidLoaded) {
+                            _imageDidLoaded = YES;
+                            if (_animationCompleted) {
+                                self.collectionView.hidden = NO;
+                                [_tmpImageView removeFromSuperview];
+                                _animationCompleted = NO;
+                            }
+                            
                         }
-                        
                     }
-                }
-            }];
+                }];
+            }
+
         }
+    
     }
     else if (self.images) {
         cell.imageView.image = self.images[indexPath.row];
@@ -267,9 +278,15 @@
     _tmpImageView = tempImageView;
     
     if (self.URLStrings && !self.images) {
-        NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:[NSURL URLWithString:self.URLStrings[_index]]];
-        UIImage *image = [[SDImageCache sharedImageCache]  imageFromDiskCacheForKey:key];
-        _imageDidLoaded = image != nil;
+        if ([self.URLStrings[_index] isKindOfClass:[NSString class]]) {
+            NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:[NSURL URLWithString:self.URLStrings[_index]]];
+            UIImage *image = [[SDImageCache sharedImageCache]  imageFromDiskCacheForKey:key];
+            _imageDidLoaded = image != nil;
+
+        }else
+        {
+            _imageDidLoaded = YES;
+        }
     }
     [self.collectionView setContentOffset:CGPointMake(kScreenWidth * index,0) animated:NO];
     
