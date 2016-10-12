@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.pageControl];
 }

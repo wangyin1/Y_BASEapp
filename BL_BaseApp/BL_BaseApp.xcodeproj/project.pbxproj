@@ -104,6 +104,7 @@
 		F3AA215F1D43C0CF00213ACF /* pick_checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3AA214E1D43C0CF00213ACF /* pick_checked@3x.png */; };
 		F3AA21601D43C0CF00213ACF /* HUToast.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AA21501D43C0CF00213ACF /* HUToast.m */; };
 		F3AA21611D43C0CF00213ACF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AA21521D43C0CF00213ACF /* UIView+frame.m */; };
+		F3B8CD621DAE372A00209336 /* backItemImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B8CD611DAE372A00209336 /* backItemImage@2x.png */; };
 		F3BA447B1D6D48F600908310 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BA44791D6D48F600908310 /* JPEngine.m */; };
 		F3BA447C1D6D48F600908310 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = F3BA447A1D6D48F600908310 /* JSPatch.js */; };
 		F3BA44801D6D4AAB00908310 /* BLJSPatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BA447F1D6D4AAB00908310 /* BLJSPatchManager.m */; };
@@ -416,6 +417,7 @@
 		F3AA21501D43C0CF00213ACF /* HUToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUToast.m; sourceTree = "<group>"; };
 		F3AA21511D43C0CF00213ACF /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3AA21521D43C0CF00213ACF /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		F3B8CD611DAE372A00209336 /* backItemImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backItemImage@2x.png"; sourceTree = "<group>"; };
 		F3BA44781D6D48F600908310 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		F3BA44791D6D48F600908310 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		F3BA447A1D6D48F600908310 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
@@ -1263,6 +1265,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D2BD181D3F59AA00925002 /* html.txt */,
+				F3B8CD611DAE372A00209336 /* backItemImage@2x.png */,
 				F345A8081D91281900BB9142 /* IMYWebView.h */,
 				F345A8091D91281900BB9142 /* IMYWebView.m */,
 				F345A80A1D91281900BB9142 /* UIWebViewProgress */,
@@ -1606,6 +1609,7 @@
 				F3AA21571D43C0CF00213ACF /* HUAlbumCell.xib in Resources */,
 				F3D2BD7E1D3F59E600925002 /* jg_hud_success@2x.png in Resources */,
 				F3D2BC721D3F4D2900925002 /* LaunchScreen.storyboard in Resources */,
+				F3B8CD621DAE372A00209336 /* backItemImage@2x.png in Resources */,
 				F3AA215A1D43C0CF00213ACF /* HUImagePickerCell.xib in Resources */,
 				F325FC9E1D6F537B0052E610 /* 添加图片.png in Resources */,
 				F3AA215F1D43C0CF00213ACF /* pick_checked@3x.png in Resources */,
@@ -1916,6 +1920,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = BL_BaseApp/BL_BaseApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cqbjzh@126.com (7LFP89H7S2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: cqbjzh@126.com (7LFP89H7S2)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
@@ -1925,11 +1931,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BL_BaseApp/Utils/JPushTool（极光通知工具）",
+					"$(PROJECT_DIR)/BL_BaseApp",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bolaa.BL-BaseApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1940,6 +1949,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = BL_BaseApp/BL_BaseApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cqbjzh@126.com (7LFP89H7S2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jylm@vats.com.cn (7BGPF3PL3D)";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
@@ -1949,6 +1960,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BL_BaseApp/Utils/JPushTool（极光通知工具）",
+					"$(PROJECT_DIR)/BL_BaseApp",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bolaa.BL-BaseApp";

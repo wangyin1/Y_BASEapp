@@ -246,6 +246,7 @@
     }
     
     CFRelease(cfFrameProperties);
+    
     return frameDuration;
 }
 

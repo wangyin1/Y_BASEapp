@@ -14,6 +14,7 @@
 #import "BLWebViewController.h"
 #import "UIView+ZQuartz.h"
 #import "TMCache.h"
+
 @interface BLLoginViewController ()
 
 DIYObj_(BLDrawView, gcontrol);
@@ -74,12 +75,18 @@ DIYObj_(BLDrawView, gcontrol);
 }
 
 - (void)changeStyle{
+    
+    //网页控制器的使用
+       BLWebViewController *vc = [[BLWebViewController alloc]initWithUrl:@"http://www.baidu.com"];
+        vc.ProgressColor = [UIColor redColor];//设置进度条颜色
+        vc.navigationController.hidesBarsOnSwipe = YES;
+        vc.navagationBarColor = [UIColor yellowColor];//设置顶部颜色
+        [self pushPage:vc Animated:YES];
 //缓存
-    NSDictionary *data = @{@"xxx":@"yy"};
-    [[TMCache sharedCache] setObject:data forKey:@"myData"];
-    
+//    NSDictionary *data = @{@"xxx":@"yy"};
+//    [[TMCache sharedCache] setObject:data forKey:@"myData"];
+//    
 
-    
 
 }
 

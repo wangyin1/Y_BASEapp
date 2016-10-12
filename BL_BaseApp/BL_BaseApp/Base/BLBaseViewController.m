@@ -90,6 +90,7 @@
         refreshView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [weakSelf headerRefreshRefreshView:refreshView];
         }];
+        
         refreshView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             [weakSelf footerRefreshRefreshView:refreshView];
         }];

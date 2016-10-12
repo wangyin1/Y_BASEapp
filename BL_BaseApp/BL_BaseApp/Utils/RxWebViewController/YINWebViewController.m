@@ -22,12 +22,14 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.snapShotsArray = [NSMutableArray array];
     [self.view addSubview:self.WebView];
     
     [self.WebView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
+    
     if (self.url) {
         [self loadUrl:self.url.absoluteString];
     }else if (self.htmlstr){
@@ -35,12 +37,18 @@
     }
     
     [self.view addSubview:self.progressView];
+    
     [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@0);
         make.left.equalTo(@0);
         make.right.equalTo(@0);
         make.height.equalTo(@2);
     }];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backItemImage"] style:1 target:self action:@selector(popBack:)];
+    
+
+    self.navigationItem.leftBarButtonItems = @[backItem];
     
 }
 
@@ -112,6 +120,7 @@
 }
 
 - (void)webViewDidStartLoad:(IMYWebView *)webView{
+
     [self.snapShotsArray addObject:webView.currentRequest];
 }
 
@@ -126,7 +135,8 @@
 }
 
 -(BOOL)webView:(IMYWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    
+
+
     switch (navigationType) {
         case UIWebViewNavigationTypeLinkClicked: {
         return  [self pushCurrentSnapshotViewWithRequest:request];
@@ -176,6 +186,30 @@
     
     return YES;
     //    NSLog(@"now array count %d",self.snapShotsArray.count);
+}
+
+//点击返回
+- (void)popBack:(UIBarButtonItem *)sender{
+    
+    if (self.WebView.canGoBack) {
+        [self.WebView goBack];
+        
+        if (self.WebView.canGoBack) {
+            UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backItemImage"] style:1 target:self action:@selector(popBack:)];
+            UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:1 target:self action:@selector(closePage)];
+            self.navigationItem.leftBarButtonItems = @[backItem,close];
+        }else{
+            UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backItemImage"] style:1 target:self action:@selector(popBack:)];
+            self.navigationItem.leftBarButtonItems = @[backItem];
+        }
+        
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)closePage{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (UIProgressView *)progressView {
