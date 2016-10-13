@@ -101,6 +101,13 @@
     [JPUSHService registrationIDCompletionHandler:completionHandler];
 }
 
++ (void)jpushToolEnterAPPWithOption:(NSDictionary *)option{
+    NSDictionary *data = [option objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (data) {
+        [[FounctionTool shareInstance].delegate jpushtool_TapNotification:data];
+    }
+}
+
 
 #pragma mark ios8以上 ios10 以下系统 通知相关处理
 

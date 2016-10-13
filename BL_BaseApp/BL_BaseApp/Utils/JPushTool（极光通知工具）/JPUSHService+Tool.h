@@ -35,6 +35,15 @@
  */
 + (void)startWithOption:(NSDictionary *)option Appkey:(NSString *)appkey ApsForProduction:(BOOL)isProduction Delegete:(id<JPUSHServiceToolDelegate>)delegate registrationIDCompletionHandler:(void (^)(int, NSString *))completionHandler;
 
+
+/**
+ 该方法用在启动app时判断是否有远程通知信息，如果有，会执行用户点击通知协议
+ 进入app调用 在didFinishLaunchingWithOptions方法的最后调用 《固定写》
+ 
+ @param option app信息字典
+ */
++ (void)jpushToolEnterAPPWithOption:(NSDictionary *)option;
+
 #pragma mark ios8以上 ios10 以下系统 通知相关处理
 + (void)application:(UIApplication *)application didReceiveNotificationUnderIOS10:(NSDictionary *)userInfo;
 
