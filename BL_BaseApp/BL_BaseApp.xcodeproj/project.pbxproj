@@ -23,6 +23,7 @@
 		F345A8071D91280800BB9142 /* YINWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F345A8061D91280800BB9142 /* YINWebViewController.m */; };
 		F345A80D1D91281900BB9142 /* IMYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F345A8091D91281900BB9142 /* IMYWebView.m */; };
 		F345A80E1D91281900BB9142 /* IMY_NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = F345A80C1D91281900BB9142 /* IMY_NJKWebViewProgress.m */; };
+		F34B000C1DBF0A0F00C34FED /* UIFont+PX.m in Sources */ = {isa = PBXBuildFile; fileRef = F34B000B1DBF0A0F00C34FED /* UIFont+PX.m */; };
 		F35FAFD01D7D484A00D2907E /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FAFCF1D7D484A00D2907E /* HttpTool.m */; };
 		F35FAFD51D7D499500D2907E /* NSDictionary+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FAFD21D7D499500D2907E /* NSDictionary+Category.m */; };
 		F35FAFD61D7D499500D2907E /* NSString+Password.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FAFD41D7D499500D2907E /* NSString+Password.m */; };
@@ -254,6 +255,8 @@
 		F345A8091D91281900BB9142 /* IMYWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMYWebView.m; sourceTree = "<group>"; };
 		F345A80B1D91281900BB9142 /* IMY_NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMY_NJKWebViewProgress.h; sourceTree = "<group>"; };
 		F345A80C1D91281900BB9142 /* IMY_NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMY_NJKWebViewProgress.m; sourceTree = "<group>"; };
+		F34B000A1DBF0A0F00C34FED /* UIFont+PX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+PX.h"; sourceTree = "<group>"; };
+		F34B000B1DBF0A0F00C34FED /* UIFont+PX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PX.m"; sourceTree = "<group>"; };
 		F35FAFCE1D7D484A00D2907E /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		F35FAFCF1D7D484A00D2907E /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		F35FAFD11D7D499500D2907E /* NSDictionary+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Category.h"; sourceTree = "<group>"; };
@@ -1193,6 +1196,8 @@
 				F3D2BDF51D3F5A7500925002 /* UITextView+Placeholder.m */,
 				F3D2BDF61D3F5A7500925002 /* UIViewController+HRAlertViewController.h */,
 				F3D2BDF71D3F5A7500925002 /* UIViewController+HRAlertViewController.m */,
+				F34B000A1DBF0A0F00C34FED /* UIFont+PX.h */,
+				F34B000B1DBF0A0F00C34FED /* UIFont+PX.m */,
 			);
 			name = "Categories(常用类目)";
 			path = Categories;
@@ -1752,6 +1757,7 @@
 				F3AA21601D43C0CF00213ACF /* HUToast.m in Sources */,
 				F3D2BD3A1D3F59D000925002 /* MJProperty.m in Sources */,
 				F345A8071D91280800BB9142 /* YINWebViewController.m in Sources */,
+				F34B000C1DBF0A0F00C34FED /* UIFont+PX.m in Sources */,
 				F3D2BE021D3F5AE900925002 /* ImagePlayerView.m in Sources */,
 				F3AA21541D43C0CF00213ACF /* HUPhotoBrowserCell.m in Sources */,
 				F3D2BDE91D3F5A4700925002 /* Manager.m in Sources */,

@@ -33,6 +33,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",                                                                               @"text/plain",                                                                               @"application/json",nil];
     // 显示进度
+    
     NSMutableDictionary *params = [basePram mutableCopy];
     //根据情况增加全局参数
 //    [params setObject:TOKEN forKey:@"token"];
@@ -40,16 +41,15 @@
     [manager POST:postUrl parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
      {
          for (NSString *key  in imageParm) {
-             NSData * imageData =  [imageParm[key] isKindOfClass:[NSData class]]?imageParm[key]:UIImageJPEGRepresentation(imageParm[key], 0.6);
-             
-             NSData *newData = UIImagePNGRepresentation([UIImage imageWithData:imageData]);
+             NSData * imageData =  [imageParm[key] isKindOfClass:[NSData class]]?imageParm[key]:[(UIImage *)imageParm[key] compressToSize:1024];
+                        
              // 上传filename
              NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
              // 设置时间格式
              formatter.dateFormat = @"yyyyMMddHHmmss";
              NSString *str = [formatter stringFromDate:[NSDate date]];
              NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
-             [formData appendPartWithFileData:newData name:key fileName:fileName mimeType:@"image/jpeg"];
+             [formData appendPartWithFileData:imageData name:key fileName:fileName mimeType:@"image/jpeg"];
          }
          
      }
