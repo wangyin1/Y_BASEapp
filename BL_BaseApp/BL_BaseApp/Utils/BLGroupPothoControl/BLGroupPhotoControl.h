@@ -12,13 +12,31 @@ typedef void(^BLGroupPhotoControlSizeChange)(CGSize size);
 
 @interface BLGroupPhotoControl : UIView
 
-CollectionView_(collectionView);//可做基本属性自定义
 
-CGSize_(itemSize);//设置item的大小
+/**
+    展示图片的承载器是一个collectionview
+    可做基本属性自定义
+ */
+@property (nonatomic , strong) UICollectionView *collectionView;
 
-BOOL_(canEdit);//是否可以编辑 不可编辑状态用于展示图片 可点击看大图
 
-Array_(images);//图片数组用来展示 本地图片和网络图片地址都可以
+/**
+ //设置item的大小
+ */
+@property (nonatomic , assign) CGSize itemSize;
+
+
+/**
+ //是否可以编辑 不可编辑状态用于展示图片 可点击看大图
+ */
+@property (nonatomic , assign) BOOL canEdit;
+
+
+/**
+ //图片数组用来展示 本地图片和网络图片地址都可以
+ */
+@property (nonatomic , strong) NSArray *images;
+
 
 - (NSArray *)realImages;//用来获取可用的图片数组 把加号除外
 
