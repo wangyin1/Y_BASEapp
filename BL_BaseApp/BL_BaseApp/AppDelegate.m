@@ -39,7 +39,7 @@
     [BLJSPatchManager start];
     
     [self DIYSetting];
-                
+    
     return YES;
 }
 

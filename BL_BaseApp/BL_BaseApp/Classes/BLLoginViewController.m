@@ -17,7 +17,8 @@
 
 @interface BLLoginViewController ()
 
-DIYObj_(BLDrawView, gcontrol);
+
+@property (nonatomic , strong) BLDrawView *gcontrol;
 
 @end
 
@@ -26,6 +27,12 @@ DIYObj_(BLDrawView, gcontrol);
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.title = @"登录";
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]]) {
+        
+        [JGProgressHUD showWithStr:@"已安装qq" WithTime:2];
+    }else{
+        [JGProgressHUD showWithStr:@"请安装qq" WithTime:2];
+    }
 }
 
 

@@ -5,7 +5,7 @@
 //  Created by 王印 on 16/7/24.
 //  Copyright © 2016年 王印. All rights reserved.
 //
-
+#import <Photos/Photos.h>
 #import "BLChoseImagesControl.h"
 #import "FounctionChose.h"
 #import "HUImagePickerViewController.h"
@@ -27,28 +27,61 @@
 }
 
 + (void)showChoseImagesAlertWithMaxCount:(NSInteger)maxCount GetImagesBlock:(BLGetImagesBlock)block DissmissBlock:(void (^)())dismiss{
+    
+    
     [BLChoseImagesControl shareInstance].block = block;
     [BLChoseImagesControl shareInstance].maxAllow = maxCount;
-    [FounctionChose showWithDataList:@[@"相册",@"拍照",@"取消"] choseBlock:^(NSString *buttonTitle, NSInteger index) {
+    
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
         
-        switch (index) {
-            case 0:{
-                [[BLChoseImagesControl shareInstance] choseImagesWithType:0];
-                
-            }
-                break;
-                
-            case 1:{
-                [[BLChoseImagesControl shareInstance] choseImagesWithType:1];
-            }
-                break;
-            default:
-                break;
-        }
-        if (dismiss) {
-            dismiss();
-        }
+      dispatch_async(dispatch_get_main_queue(), ^{
+          if (status==PHAuthorizationStatusAuthorized) {
+              [FounctionChose showWithDataList:@[@"相册",@"拍照",@"取消"] choseBlock:^(NSString *buttonTitle, NSInteger index) {
+                  
+                  switch (index) {
+                      case 0:{
+                          [[BLChoseImagesControl shareInstance] choseImagesWithType:0];
+                          
+                      }
+                          break;
+                          
+                      case 1:{
+                          [[BLChoseImagesControl shareInstance] choseImagesWithType:1];
+                      }
+                          break;
+                      default:
+                          break;
+                  }
+                  if (dismiss) {
+                      dismiss();
+                  }
+              }];
+              
+          }else{
+              
+              UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"请开启相册访问权限" preferredStyle:UIAlertControllerStyleAlert];
+              UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                  
+              }];
+              
+              UIAlertAction *setting = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                  
+                  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+                  
+              }];
+              
+              [alert addAction:cancel];
+              [alert addAction:setting];
+              
+              [[[MYAPP window] rootViewController]presentViewController:alert animated:YES completion:^{
+                  
+              }];
+              
+              
+          } 
+      });
     }];
+    
     
 }
 

@@ -1561,7 +1561,8 @@
 				TargetAttributes = {
 					F3D2BC5E1D3F4D2900925002 = {
 						CreatedOnToolsVersion = 7.3.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = HMEM9425GD;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1927,8 +1928,8 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = BL_BaseApp/BL_BaseApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: cqbjzh@126.com (7LFP89H7S2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: cqbjzh@126.com (7LFP89H7S2)";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HMEM9425GD;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BL_BaseApp/Info.plist;
@@ -1956,8 +1957,8 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = BL_BaseApp/BL_BaseApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: cqbjzh@126.com (7LFP89H7S2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jylm@vats.com.cn (7BGPF3PL3D)";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HMEM9425GD;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BL_BaseApp/Info.plist;
