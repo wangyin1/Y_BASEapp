@@ -19,6 +19,7 @@
 		F325FCA21D700E2A0052E610 /* BLGroupCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F325FCA01D700E2A0052E610 /* BLGroupCollectionViewCell.m */; };
 		F325FCA31D700E2A0052E610 /* BLGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F325FCA11D700E2A0052E610 /* BLGroupCollectionViewCell.xib */; };
 		F330D9781D6EE1E700C61555 /* BLGroupPhotoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F330D9771D6EE1E700C61555 /* BLGroupPhotoControl.m */; };
+		F33301CB1DD07783009EC005 /* WKWebView+BLSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F33301CA1DD07783009EC005 /* WKWebView+BLSize.m */; };
 		F33F9AEA1D7B0C68000A955F /* BaseTabarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F9AE91D7B0C68000A955F /* BaseTabarController.m */; };
 		F345A8071D91280800BB9142 /* YINWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F345A8061D91280800BB9142 /* YINWebViewController.m */; };
 		F345A80D1D91281900BB9142 /* IMYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F345A8091D91281900BB9142 /* IMYWebView.m */; };
@@ -247,6 +248,8 @@
 		F325FCA11D700E2A0052E610 /* BLGroupCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLGroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		F330D9761D6EE1E700C61555 /* BLGroupPhotoControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGroupPhotoControl.h; sourceTree = "<group>"; };
 		F330D9771D6EE1E700C61555 /* BLGroupPhotoControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLGroupPhotoControl.m; sourceTree = "<group>"; };
+		F33301C91DD07783009EC005 /* WKWebView+BLSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+BLSize.h"; sourceTree = "<group>"; };
+		F33301CA1DD07783009EC005 /* WKWebView+BLSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+BLSize.m"; sourceTree = "<group>"; };
 		F33F9AE81D7B0C68000A955F /* BaseTabarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabarController.h; sourceTree = "<group>"; };
 		F33F9AE91D7B0C68000A955F /* BaseTabarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabarController.m; sourceTree = "<group>"; };
 		F345A8051D91280800BB9142 /* YINWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YINWebViewController.h; sourceTree = "<group>"; };
@@ -1180,6 +1183,8 @@
 				F3CBA3F71D923C2300EC1467 /* UIView+NoData.m */,
 				F320BB161D6713D700C65367 /* LFUIView+Add.h */,
 				F320BB171D6713D700C65367 /* LFUIView+Add.m */,
+				F33301C91DD07783009EC005 /* WKWebView+BLSize.h */,
+				F33301CA1DD07783009EC005 /* WKWebView+BLSize.m */,
 				F385F5061D630A8400028BAA /* UIWebView+BLSize.h */,
 				F385F5071D630A8400028BAA /* UIWebView+BLSize.m */,
 				F3D2BDEA1D3F5A7500925002 /* NSDictionary+Format.h */,
@@ -1677,6 +1682,7 @@
 				F3D316E51D7689BB008C5788 /* UIView+ZQuartz.m in Sources */,
 				F3D2BD5E1D3F59DA00925002 /* MASConstraintMaker.m in Sources */,
 				F3A92D9D1D41F7FC00F36CD0 /* AFURLConnectionOperation.m in Sources */,
+				F33301CB1DD07783009EC005 /* WKWebView+BLSize.m in Sources */,
 				F3A92DE51D41FA4A00F36CD0 /* MJRefreshStateHeader.m in Sources */,
 				F3A92DED1D41FDA400F36CD0 /* BLBaseViewController.m in Sources */,
 				F3D2BD3B1D3F59D000925002 /* MJPropertyKey.m in Sources */,
