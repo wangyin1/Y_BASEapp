@@ -2,7 +2,7 @@
 iOS 快速开发框架，整理了常用的第三方，加入了自己在各个经历过的项目中总结的catergroy和控件。基本的工程配置已完成。只需要在pch文件和接口路径文件中做简单的配置即可使用。已有登录和第一次启动判断。
 
 
-WLayOut  （瀑布流layout）
+#pragma mark WLayOut  （瀑布流layout）
 @protocol WVerticalLayOutDelegate <NSObject>
 
 
@@ -40,7 +40,8 @@ WLayOut  （瀑布流layout）
 @end
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
-BLJSPatchManager (基于jspatch的热修复框架封装)
+
+#pragma mark BLJSPatchManager (基于jspatch的热修复框架封装)
 + (instancetype)shareManager;
 
 /**
@@ -57,7 +58,8 @@ BLJSPatchManager (基于jspatch的热修复框架封装)
 + (NSURL *)patchFileURL;
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
-BLChoseImagesControl（快速选择图片,自带弹出控件，支持多选）
+
+#pragma mark BLChoseImagesControl（快速选择图片,自带弹出控件，支持多选）
 /**
 *  选择图片带选择器
 *
@@ -68,7 +70,8 @@ BLChoseImagesControl（快速选择图片,自带弹出控件，支持多选）
 + (void)showChoseImagesAlertWithMaxCount:(NSInteger)maxCount GetImagesBlock:(BLGetImagesBlock)block DissmissBlock:(void (^)())dismiss;
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
-BLWebViewController（wkwebview网页控制器，自带进度条，已控制返回按钮事件，父类是YINWebViewController）
+
+#pragma mark BLWebViewController（wkwebview网页控制器，自带进度条，已控制返回按钮事件，父类是YINWebViewController）
 /**
 IMYWebView 实体类，包含wkwebview  里面很多控制方法
 */
@@ -139,7 +142,8 @@ IMYWebView 实体类，包含wkwebview  里面很多控制方法
 
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
-XHLaunchAd（启动广告页）
+
+#pragma mark XHLaunchAd（启动广告页）
 
 /**
 *  广告点击事件回调
@@ -178,7 +182,7 @@ XHLaunchAd（启动广告页）
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
-HttpTool（基于afnetworking网络请求封装，带缓存处理，可根据具体的需求，无网时显示历史请求数据）
+#pragma mark HttpTool（基于afnetworking网络请求封装，带缓存处理，可根据具体的需求，无网时显示历史请求数据）
 
 /**
 *  总的请求，包含cache
@@ -193,28 +197,22 @@ HttpTool（基于afnetworking网络请求封装，带缓存处理，可根据具
 + (void)requestHttpWithCacheType:(HttpCacheType)cacheType requestType:(HttpRequestType)requestType  url:(NSString *)url params:(NSDictionary *)params OldDataBlock:(successBlock)oldData success:(successBlock)success failure:(void (^)(NSError *))failure;
 
 
-+ (void)clearAllLocalHttpCache:(clearHttpCacheBlock)block;/**<清除所有本地http缓存*/
++ (void)clearAllLocalHttpCache:(clearHttpCacheBlock)block;/*清除所有本地http缓存*/
+
 
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
-JPUSHService+Tool（对极光推送sdk进行了处理，使用户使用更加简单明了，完全不需要参考极光文档，只需要使用JPUSHService+Tool就可以集成）
-
-@class JPUSHService;
-
-@protocol JPUSHServiceToolDelegate <NSObject>
+#pragma mark JPUSHService+Tool（对极光推送sdk进行了处理，使用户使用更加简单明了，完全不需要参考极光文档，只需要使用JPUSHService+Tool就可以集成）
+JPUSHServiceToolDelegate 
 //用户点击通知时
 - (void)jpushtool_TapNotification:(NSDictionary *)userInfo;
 
 //在前台时收到通知 是否显示消息框
 - (BOOL)jpushtool_ShowNotificationActiveReceiveNotification:(NSDictionary *)userInfo;
 
-@end
 
-
-
-@interface JPUSHService (Tool)
-
+JPUSHService (Tool)
 
 /**
 启动sdk 适配ios8-ios10 并且回调注册成功的registrationID
@@ -236,8 +234,8 @@ JPUSHService+Tool（对极光推送sdk进行了处理，使用户使用更加简
 */
 + (void)jpushToolEnterAPPWithOption:(NSDictionary *)option;
 
-#pragma mark ios8以上 ios10 以下系统 通知相关处理
+//ios8以上 ios10 以下系统 通知相关处理
 + (void)application:(UIApplication *)application didReceiveNotificationUnderIOS10:(NSDictionary *)userInfo;
 
-@end
+
 
