@@ -40,7 +40,7 @@
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         [JPUSHService handleRemoteNotification:userInfo];
         NSLog(@"iOS10 收到远程通知:%@", userInfo);
-        
+
         [self.delegate jpushtool_TapNotification:userInfo];
         
     }
@@ -113,6 +113,7 @@
 
 + (void)application:(UIApplication *)application
     didReceiveNotificationUnderIOS10:(NSDictionary *)userInfo{
+     [JPUSHService handleRemoteNotification:userInfo];
     if (application.applicationState==UIApplicationStateInactive) {//点击消息
         [[FounctionTool shareInstance].delegate jpushtool_TapNotification:userInfo];
     }else if (application.applicationState==UIApplicationStateActive){//在前台收到消息

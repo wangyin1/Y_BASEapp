@@ -27,12 +27,14 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.title = @"登录";
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]]) {
-        
-        [JGProgressHUD showWithStr:@"已安装qq" WithTime:2];
-    }else{
-        [JGProgressHUD showWithStr:@"请安装qq" WithTime:2];
-    }
+    
+//    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]]) {
+//        
+//        [JGProgressHUD showWithStr:@"已安装qq" WithTime:2];
+//    }else{
+//        [JGProgressHUD showWithStr:@"请安装qq" WithTime:2];
+//    }
+
 }
 
 
@@ -77,6 +79,8 @@
 //    [aview draw];
 //    [self.view addSubview:aview];
 //    self.gcontrol = aview;
+    
+    
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"<=>" style:1 target:self action:@selector(changeStyle)];
     self.navigationItem.rightBarButtonItem = right;
 }

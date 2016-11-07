@@ -11,8 +11,9 @@
 @interface WLayOut ()
 
 @property(nonatomic,strong)NSMutableDictionary      *heightDic;
-
-
+@property (nonatomic,assign) NSInteger maxNumCols;//几列
+@property(nonatomic,strong)NSArray      *heights;//每个cell的高度；每个cell的高度必须大于10
+@property(nonatomic,assign)CGFloat      awidth;//间距
 
 @end
 
@@ -23,6 +24,35 @@
 
 - (void)prepareLayout{
     [super prepareLayout];
+}
+
+
+- (NSArray *)heights{
+//    if (!_heights) {
+        if (self.delegate) {
+            NSMutableArray *arr = [NSMutableArray array];
+            for (int i = 0; i<[(id <UICollectionViewDataSource>)self.collectionView.delegate collectionView:self.collectionView numberOfItemsInSection:0]; i++) {
+                [arr addObject:@([self.delegate VerticalLayOut:self HeightForRow:i])];
+            }
+            return arr;
+        }
+//    }
+    return _heights;
+}
+
+- (NSInteger)maxNumCols{
+    if (self.delegate) {
+        return [self.delegate VerticalLayOutnumberOfMaxNumCols:self];
+    }
+    return 1;
+}
+
+- (CGFloat)awidth{
+    if (self.delegate) {
+        return [self.delegate VerticalLayOutPixelSpacing:self];
+    }
+    
+    return 10;
 }
 
 - (NSMutableDictionary *)heightDic{

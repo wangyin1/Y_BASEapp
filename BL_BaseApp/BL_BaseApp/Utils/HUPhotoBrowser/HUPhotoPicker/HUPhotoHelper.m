@@ -206,7 +206,7 @@ static NSString * const kOriginalImages = @"";
             
             for (PHAsset *asset in assets) {
                 // 是否要原图
-                CGSize size = original ? CGSizeMake(asset.pixelWidth, asset.pixelHeight) : CGSizeZero;
+                CGSize size = original ? CGSizeMake(asset.pixelWidth, asset.pixelHeight) : CGSizeMake(100, 100);
                 // 从asset中获得图片
                 [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage * result, NSDictionary * info) {
                     if (result) {
