@@ -11,9 +11,6 @@
 @interface WLayOut ()
 
 @property(nonatomic,strong)NSMutableDictionary      *heightDic;
-@property (nonatomic,assign) NSInteger maxNumCols;//几列
-@property(nonatomic,strong)NSArray      *heights;//每个cell的高度；每个cell的高度必须大于10
-@property(nonatomic,assign)CGFloat      awidth;//间距
 
 @end
 
@@ -44,7 +41,7 @@
     if (self.delegate) {
         return [self.delegate VerticalLayOutnumberOfMaxNumCols:self];
     }
-    return 1;
+    return _maxNumCols>1?_maxNumCols:1;
 }
 
 - (CGFloat)awidth{
@@ -52,7 +49,7 @@
         return [self.delegate VerticalLayOutPixelSpacing:self];
     }
     
-    return 10;
+    return _awidth>1?_awidth:10;
 }
 
 - (NSMutableDictionary *)heightDic{

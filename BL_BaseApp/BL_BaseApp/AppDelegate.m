@@ -69,6 +69,7 @@
 
 //添加启动广告控件
 - (void)initADView{
+    [[NSUserDefaults standardUserDefaults] setObject:@"http://pic77.nipic.com/file/20150910/21756640_103521161000_2.jpg" forKey:@"adimageurl"];
     XHLaunchAd *launchAd = [[XHLaunchAd alloc] initWithFrame:self.window.bounds andDuration:ADIMAGEURL?6:3];
     NSString *imgUrlString = ADIMAGEURL;//广告图地址，（可写死，后台改变广告图时，图片地址不变，也可在进入app后调用接口获取，再缓存，下次启动app生效）
     [launchAd imgUrlString:imgUrlString options:XHWebImageRefreshCached completed:^(UIImage *image, NSURL *url) {

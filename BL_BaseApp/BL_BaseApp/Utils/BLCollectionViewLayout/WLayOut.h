@@ -13,6 +13,8 @@
 @protocol WVerticalLayOutDelegate <NSObject>
 
 
+
+
 /**
  返回列数
 
@@ -50,6 +52,10 @@
 @interface WLayOut : UICollectionViewFlowLayout
 
 
+
+@property (nonatomic,assign) NSInteger maxNumCols;//几列
+@property(nonatomic,strong)NSArray      *heights;//每个cell的高度；每个cell的高度必须大于10
+@property(nonatomic,assign)CGFloat      awidth;//间距
 @property (nonatomic , weak) id<WVerticalLayOutDelegate> delegate;
 
 
