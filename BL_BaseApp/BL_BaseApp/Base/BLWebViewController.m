@@ -12,7 +12,7 @@
 
 @interface BLWebViewController ()<WKScriptMessageHandler>
 
-DIYObj_(JSContext, context);
+//DIYObj_(JSContext, context);
 
 @end
 
@@ -22,7 +22,7 @@ DIYObj_(JSContext, context);
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [[(WKWebView *)self.WebView.realWebView configuration].userContentController addScriptMessageHandler:self name:@"showAblueView"];//添加方法
+    [[(WKWebView *)self.WebView.realWebView configuration].userContentController addScriptMessageHandler:self name:@"showAblueView"];//添加方法，js调原生的方法协议必须在这里注册
     weakify(self);
     [self setLoadFinsh:^(WKWebView *webView) {
         [webView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none';" completionHandler:nil];
@@ -47,7 +47,7 @@ DIYObj_(JSContext, context);
     dispatch_async(dispatch_get_main_queue(), ^{
         
         //判断是什么命令
-        if ([message.name isEqualToString:@""]) {//方法名
+        if ([message.name isEqualToString:@""]) {//注册过的方法名
             //获取js 参数
             //        message.body;
         }

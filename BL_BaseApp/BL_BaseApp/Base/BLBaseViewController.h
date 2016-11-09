@@ -14,12 +14,24 @@
 /**
  *  navagationbar的基本配置
  */
-Color_(navagationBarTextColor);//字体颜色 默认为[UIColor blackColor]
-Color_(navagationBarColor);//背景颜色 默认为[UIColor whiteColor]
-float_(navagationBarHeight);//navagationbar 的高度 默认为44 高度改变之后控件靠顶部约束
-BOOL_(navagationBarLucency);//设置对应的navagationbar是否透明 默认为NO不透明 YES透明
-ScrollView_(refreshView);//对哪个子视图做刷新控制
-BOOL_(navagationBarHiden);//navagationbar是否隐藏 默认为不隐藏navagationbar
+
+//字体颜色 默认为[UIColor blackColor]
+@property (nonatomic , strong) UIColor *navagationBarTextColor;
+
+//背景颜色 默认为[UIColor whiteColor]
+@property (nonatomic , strong) UIColor *navagationBarColor;
+
+//navagationbar 的高度 默认为44 高度改变之后控件靠顶部约束
+@property (nonatomic , assign) CGFloat navagationBarHeight;
+
+//设置对应的navagationbar是否透明 默认为NO不透明 YES透明
+@property (nonatomic , assign) BOOL navagationBarLucency;
+
+//对哪个子视图做刷新控制
+@property (nonatomic , strong) UIScrollView *refreshView;
+
+//navagationbar是否隐藏 默认为不隐藏navagationbar
+@property (nonatomic , assign) BOOL navagationBarHiden;
 
 #pragma mark 主动方法
 //整页视图加载

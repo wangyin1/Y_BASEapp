@@ -22,7 +22,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.snapShotsArray = [NSMutableArray array];
     [self.view addSubview:self.WebView];
     
