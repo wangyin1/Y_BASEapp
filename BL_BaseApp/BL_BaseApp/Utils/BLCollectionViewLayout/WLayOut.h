@@ -17,9 +17,9 @@
 
 /**
  返回列数
-
+ 
  @param layout
-
+ 
  @return
  */
 - (NSInteger)VerticalLayOutnumberOfMaxNumCols:(WLayOut *)layout;
@@ -28,10 +28,10 @@
 
 /**
  返回每个元素的高度
-
+ 
  @param layout
  @param row    元素位置
-
+ 
  @return
  */
 - (CGFloat)VerticalLayOut:(WLayOut *)layout HeightForRow:(NSInteger)row;
@@ -40,16 +40,16 @@
 
 /**
  返回间距
-
+ 
  @param layout
-
+ 
  @return
  */
 - (CGFloat)VerticalLayOutPixelSpacing:(WLayOut *)layout;
 
 @end
 
-@interface WLayOut : UICollectionViewFlowLayout
+@interface WLayOut : UICollectionViewLayout
 
 
 

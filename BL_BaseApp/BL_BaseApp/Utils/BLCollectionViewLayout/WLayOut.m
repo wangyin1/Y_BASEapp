@@ -25,15 +25,16 @@
 
 
 - (NSArray *)heights{
-//    if (!_heights) {
-        if (self.delegate) {
-            NSMutableArray *arr = [NSMutableArray array];
-            for (int i = 0; i<[(id <UICollectionViewDataSource>)self.collectionView.delegate collectionView:self.collectionView numberOfItemsInSection:0]; i++) {
-                [arr addObject:@([self.delegate VerticalLayOut:self HeightForRow:i])];
-            }
-            return arr;
+    //    if (!_heights) {
+    if (self.delegate) {
+        NSMutableArray *arr = [NSMutableArray array];
+        for (int i = 0; i<[(id <UICollectionViewDataSource>)self.collectionView.delegate collectionView:self.collectionView numberOfItemsInSection:0]; i++) {
+            [arr addObject:@([self.delegate VerticalLayOut:self HeightForRow:i])];
         }
-//    }
+        _heights = arr;
+        return arr;
+    }
+    //    }
     return _heights;
 }
 
@@ -125,7 +126,7 @@
     
     NSMutableArray *attributes = [NSMutableArray array];
     CGFloat width = (self.collectionView.bounds.size.width-((self.maxNumCols+1)*self.awidth))/self.maxNumCols;
-    for (int i = 0;i<_heights.count;i++) {
+    for (int i = 0;i<self.heights.count;i++) {
         
         UICollectionViewLayoutAttributes *attribute = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         if (i>=self.maxNumCols) {
@@ -138,7 +139,7 @@
             
             attribute.frame = CGRectMake(topOne.frame.origin.x,CGRectGetMaxY(topOne.frame)+self.awidth,width, [self.heights[i] floatValue]);
         }else{
-            attribute.frame = CGRectMake(_awidth+i*(width+_awidth),_awidth,width, [self.heights[i] floatValue]);
+            attribute.frame = CGRectMake(self.awidth+i*(width+self.awidth),self.awidth,width, [self.heights[i] floatValue]);
         }
         
         [attributes addObject:attribute];

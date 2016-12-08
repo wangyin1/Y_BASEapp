@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC5642401DF948390058871B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EC56423F1DF948390058871B /* MBProgressHUD.m */; };
+		EC5642441DF95DE90058871B /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5642431DF95DE90058871B /* Aspects.m */; };
 		F320BB141D670F5B00C65367 /* LFUIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = F320BB131D670F5B00C65367 /* LFUIView+Badge.m */; };
 		F320BB181D6713D700C65367 /* LFUIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = F320BB171D6713D700C65367 /* LFUIView+Add.m */; };
 		F32228CB1D8F8F0400283270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F32228CA1D8F8F0400283270 /* Assets.xcassets */; };
@@ -227,6 +229,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC56423E1DF948390058871B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EC56423F1DF948390058871B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		EC5642421DF95DE90058871B /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		EC5642431DF95DE90058871B /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		F320BB121D670F5B00C65367 /* LFUIView+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LFUIView+Badge.h"; sourceTree = "<group>"; };
 		F320BB131D670F5B00C65367 /* LFUIView+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LFUIView+Badge.m"; sourceTree = "<group>"; };
 		F320BB151D67121300C65367 /* BLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLMacro.h; sourceTree = "<group>"; };
@@ -660,6 +666,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC56423D1DF948320058871B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EC56423E1DF948390058871B /* MBProgressHUD.h */,
+				EC56423F1DF948390058871B /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		EC5642411DF95DDE0058871B /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				EC5642421DF95DE90058871B /* Aspects.h */,
+				EC5642431DF95DE90058871B /* Aspects.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
 		F32228CE1D8FDD7500283270 /* JPushTool（极光通知工具） */ = {
 			isa = PBXGroup;
 			children = (
@@ -1230,6 +1254,8 @@
 		F3D2BCD71D3F574D00925002 /* Utils（控件封装和实用工具） */ = {
 			isa = PBXGroup;
 			children = (
+				EC5642411DF95DDE0058871B /* Aspects */,
+				EC56423D1DF948320058871B /* MBProgressHUD */,
 				F32228CE1D8FDD7500283270 /* JPushTool（极光通知工具） */,
 				F3D316E81D7691EC008C5788 /* BLDrawView（可绘基本图形的view） */,
 				F325FC991D6F48C10052E610 /* BLCollectionViewLayout（瀑布流layout） */,
@@ -1710,6 +1736,7 @@
 				F3D2BDF81D3F5A7500925002 /* NSDictionary+Format.m in Sources */,
 				F3D2BDAE1D3F59F400925002 /* IQTextView.m in Sources */,
 				F389D9B31D4447B700476C23 /* FounctionChose.m in Sources */,
+				EC5642401DF948390058871B /* MBProgressHUD.m in Sources */,
 				F3D2BD841D3F59E600925002 /* JGProgressHUDIndicatorView.m in Sources */,
 				F3D2BDAA1D3F59F400925002 /* IQUIWindow+Hierarchy.m in Sources */,
 				F3D2BDB01D3F59F400925002 /* IQTitleBarButtonItem.m in Sources */,
@@ -1774,6 +1801,7 @@
 				F3AA211E1D43237E00213ACF /* UIView+WebCacheOperation.m in Sources */,
 				F3A92DDB1D41FA4A00F36CD0 /* MJRefreshFooter.m in Sources */,
 				F3D2BD821D3F59E600925002 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
+				EC5642441DF95DE90058871B /* Aspects.m in Sources */,
 				F3D2BD631D3F59DA00925002 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F3D2BDFD1D3F5A7500925002 /* UITextView+Placeholder.m in Sources */,
 				F3D2BDAD1D3F59F400925002 /* IQSegmentedNextPrevious.m in Sources */,

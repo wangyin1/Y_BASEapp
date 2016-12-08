@@ -21,7 +21,8 @@
             sucessBlock(obj);
         }
     } failure:^(NSError *error) {
-        [JGProgressHUD showWithStr:error.localizedDescription WithTime:2];
+        [MBProgressHUD showString:error.localizedDescription duration:2];
+        
     }];
 }
 
@@ -60,7 +61,7 @@
          if (sucessBlock) {
              id object = [operation.responseString objectFromJSONString];
              if ([object[@"status"] integerValue]!=1) {
-                 [JGProgressHUD showWithStr:object[@"info"]WithTime:2];
+                 [MBProgressHUD showString:object[@"info"] duration:2];
              }
              sucessBlock(object);
          }
@@ -69,7 +70,7 @@
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          
-         [JGProgressHUD showWithStr: error.localizedDescription WithTime:2];
+         [MBProgressHUD showString:error.localizedDescription  duration:2];
          if (falierBolck) {
              falierBolck(error);
          }
