@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC06239D1DFA550E007A25B6 /* CSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06238A1DFA550E007A25B6 /* CSAnimation.m */; };
+		EC06239F1DFA550E007A25B6 /* CSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06238E1DFA550E007A25B6 /* CSBlurView.m */; };
+		EC0623A01DFA550E007A25B6 /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623901DFA550E007A25B6 /* CSNavigationController.m */; };
+		EC0623A11DFA550E007A25B6 /* UIButton+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623921DFA550E007A25B6 /* UIButton+TCCustomFont.m */; };
+		EC0623A21DFA550E007A25B6 /* UILabel+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623941DFA550E007A25B6 /* UILabel+TCCustomFont.m */; };
+		EC0623A31DFA550E007A25B6 /* UINavigationBar+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623961DFA550E007A25B6 /* UINavigationBar+TCCustomFont.m */; };
+		EC0623A41DFA550E007A25B6 /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623981DFA550E007A25B6 /* UITextField+PlaceholderColor.m */; };
+		EC0623A51DFA550E007A25B6 /* UITextField+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06239A1DFA550E007A25B6 /* UITextField+TCCustomFont.m */; };
+		EC0623A61DFA550E007A25B6 /* UITextView+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */; };
+		EC0623A91DFA5975007A25B6 /* UIView+Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */; };
 		EC5642401DF948390058871B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EC56423F1DF948390058871B /* MBProgressHUD.m */; };
 		EC5642441DF95DE90058871B /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5642431DF95DE90058871B /* Aspects.m */; };
 		F320BB141D670F5B00C65367 /* LFUIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = F320BB131D670F5B00C65367 /* LFUIView+Badge.m */; };
@@ -229,6 +239,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC0623881DFA550E007A25B6 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
+		EC0623891DFA550E007A25B6 /* CSAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAnimation.h; sourceTree = "<group>"; };
+		EC06238A1DFA550E007A25B6 /* CSAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAnimation.m; sourceTree = "<group>"; };
+		EC06238D1DFA550E007A25B6 /* CSBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBlurView.h; sourceTree = "<group>"; };
+		EC06238E1DFA550E007A25B6 /* CSBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBlurView.m; sourceTree = "<group>"; };
+		EC06238F1DFA550E007A25B6 /* CSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNavigationController.h; sourceTree = "<group>"; };
+		EC0623901DFA550E007A25B6 /* CSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNavigationController.m; sourceTree = "<group>"; };
+		EC0623911DFA550E007A25B6 /* UIButton+TCCustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TCCustomFont.h"; sourceTree = "<group>"; };
+		EC0623921DFA550E007A25B6 /* UIButton+TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TCCustomFont.m"; sourceTree = "<group>"; };
+		EC0623931DFA550E007A25B6 /* UILabel+TCCustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TCCustomFont.h"; sourceTree = "<group>"; };
+		EC0623941DFA550E007A25B6 /* UILabel+TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TCCustomFont.m"; sourceTree = "<group>"; };
+		EC0623951DFA550E007A25B6 /* UINavigationBar+TCCustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TCCustomFont.h"; sourceTree = "<group>"; };
+		EC0623961DFA550E007A25B6 /* UINavigationBar+TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TCCustomFont.m"; sourceTree = "<group>"; };
+		EC0623971DFA550E007A25B6 /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
+		EC0623981DFA550E007A25B6 /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
+		EC0623991DFA550E007A25B6 /* UITextField+TCCustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+TCCustomFont.h"; sourceTree = "<group>"; };
+		EC06239A1DFA550E007A25B6 /* UITextField+TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+TCCustomFont.m"; sourceTree = "<group>"; };
+		EC06239B1DFA550E007A25B6 /* UITextView+TCCustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+TCCustomFont.h"; sourceTree = "<group>"; };
+		EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TCCustomFont.m"; sourceTree = "<group>"; };
+		EC0623A71DFA5975007A25B6 /* UIView+Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Canvas.h"; sourceTree = "<group>"; };
+		EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Canvas.m"; sourceTree = "<group>"; };
 		EC56423E1DF948390058871B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		EC56423F1DF948390058871B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		EC5642421DF95DE90058871B /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
@@ -666,6 +697,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC0623871DFA550E007A25B6 /* CanvasLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				EC0623881DFA550E007A25B6 /* Canvas.h */,
+				EC0623891DFA550E007A25B6 /* CSAnimation.h */,
+				EC06238A1DFA550E007A25B6 /* CSAnimation.m */,
+				EC06238D1DFA550E007A25B6 /* CSBlurView.h */,
+				EC06238E1DFA550E007A25B6 /* CSBlurView.m */,
+				EC06238F1DFA550E007A25B6 /* CSNavigationController.h */,
+				EC0623901DFA550E007A25B6 /* CSNavigationController.m */,
+				EC0623911DFA550E007A25B6 /* UIButton+TCCustomFont.h */,
+				EC0623921DFA550E007A25B6 /* UIButton+TCCustomFont.m */,
+				EC0623931DFA550E007A25B6 /* UILabel+TCCustomFont.h */,
+				EC0623941DFA550E007A25B6 /* UILabel+TCCustomFont.m */,
+				EC0623951DFA550E007A25B6 /* UINavigationBar+TCCustomFont.h */,
+				EC0623961DFA550E007A25B6 /* UINavigationBar+TCCustomFont.m */,
+				EC0623971DFA550E007A25B6 /* UITextField+PlaceholderColor.h */,
+				EC0623981DFA550E007A25B6 /* UITextField+PlaceholderColor.m */,
+				EC0623991DFA550E007A25B6 /* UITextField+TCCustomFont.h */,
+				EC06239A1DFA550E007A25B6 /* UITextField+TCCustomFont.m */,
+				EC06239B1DFA550E007A25B6 /* UITextView+TCCustomFont.h */,
+				EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */,
+				EC0623A71DFA5975007A25B6 /* UIView+Canvas.h */,
+				EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */,
+			);
+			path = CanvasLibrary;
+			sourceTree = "<group>";
+		};
 		EC56423D1DF948320058871B /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -1254,6 +1313,7 @@
 		F3D2BCD71D3F574D00925002 /* Utils（控件封装和实用工具） */ = {
 			isa = PBXGroup;
 			children = (
+				EC0623871DFA550E007A25B6 /* CanvasLibrary */,
 				EC5642411DF95DDE0058871B /* Aspects */,
 				EC56423D1DF948320058871B /* MBProgressHUD */,
 				F32228CE1D8FDD7500283270 /* JPushTool（极光通知工具） */,
@@ -1697,6 +1757,7 @@
 				F3A92D981D41F7FC00F36CD0 /* AFHTTPRequestOperation.m in Sources */,
 				F3AA21611D43C0CF00213ACF /* UIView+frame.m in Sources */,
 				F3A92DA41D41F7FC00F36CD0 /* UIButton+AFNetworking.m in Sources */,
+				EC06239F1DFA550E007A25B6 /* CSBlurView.m in Sources */,
 				F3D2BD811D3F59E600925002 /* JGProgressHUDFadeAnimation.m in Sources */,
 				F3AA211C1D43237E00213ACF /* UIImageView+HighlightedWebCache.m in Sources */,
 				F3AA21131D43237E00213ACF /* SDWebImageDecoder.m in Sources */,
@@ -1713,7 +1774,9 @@
 				F3A92DED1D41FDA400F36CD0 /* BLBaseViewController.m in Sources */,
 				F3D2BD3B1D3F59D000925002 /* MJPropertyKey.m in Sources */,
 				F3D2BD3C1D3F59D000925002 /* MJPropertyType.m in Sources */,
+				EC0623A31DFA550E007A25B6 /* UINavigationBar+TCCustomFont.m in Sources */,
 				F35FAFD61D7D499500D2907E /* NSString+Password.m in Sources */,
+				EC0623A91DFA5975007A25B6 /* UIView+Canvas.m in Sources */,
 				F3AA211A1D43237E00213ACF /* UIImage+MultiFormat.m in Sources */,
 				F3D2BDFA1D3F5A7500925002 /* NSString+Help.m in Sources */,
 				F3D2BD601D3F59DA00925002 /* MASViewAttribute.m in Sources */,
@@ -1758,6 +1821,7 @@
 				F3D2BD861D3F59E600925002 /* JGProgressHUDRingIndicatorView.m in Sources */,
 				F3D2BC671D3F4D2900925002 /* AppDelegate.m in Sources */,
 				F389D9BE1D44608500476C23 /* XHLaunchAd.m in Sources */,
+				EC0623A11DFA550E007A25B6 /* UIButton+TCCustomFont.m in Sources */,
 				F3D2BDA91D3F59F400925002 /* IQUIView+Hierarchy.m in Sources */,
 				F3AA210F1D43237E00213ACF /* MKAnnotationView+WebCache.m in Sources */,
 				F3D2BD641D3F59DA00925002 /* View+MASAdditions.m in Sources */,
@@ -1767,16 +1831,20 @@
 				F325FC9C1D6F48C90052E610 /* WLayOut.m in Sources */,
 				F3AA21151D43237E00213ACF /* SDWebImageDownloaderOperation.m in Sources */,
 				F320BB181D6713D700C65367 /* LFUIView+Add.m in Sources */,
+				EC0623A41DFA550E007A25B6 /* UITextField+PlaceholderColor.m in Sources */,
 				F3AA21101D43237E00213ACF /* NSData+ImageContentType.m in Sources */,
 				F3D2BD5D1D3F59DA00925002 /* MASConstraint.m in Sources */,
 				F3D2BD801D3F59E600925002 /* JGProgressHUDAnimation.m in Sources */,
 				F3AA21141D43237E00213ACF /* SDWebImageDownloader.m in Sources */,
 				F3D2BCE01D3F598400925002 /* TMCache.m in Sources */,
+				EC0623A21DFA550E007A25B6 /* UILabel+TCCustomFont.m in Sources */,
+				EC0623A61DFA550E007A25B6 /* UITextView+TCCustomFont.m in Sources */,
 				F3D2BDAF1D3F59F400925002 /* IQBarButtonItem.m in Sources */,
 				F3AA21561D43C0CF00213ACF /* HUAlbumCell.m in Sources */,
 				F3D2BD381D3F59D000925002 /* MJExtensionConst.m in Sources */,
 				F3A92DDD1D41FA4A00F36CD0 /* MJRefreshAutoGifFooter.m in Sources */,
 				F3A92DD81D41FA4A00F36CD0 /* MJRefreshAutoFooter.m in Sources */,
+				EC0623A01DFA550E007A25B6 /* CSNavigationController.m in Sources */,
 				F32228D91D8FDE3D00283270 /* JPUSHService+Tool.m in Sources */,
 				F3D2BD411D3F59D000925002 /* NSString+MJExtension.m in Sources */,
 				F3A92DA61D41F7FC00F36CD0 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1800,8 +1868,10 @@
 				F3AA21241D4395D000213ACF /* WFirstVC.m in Sources */,
 				F3AA211E1D43237E00213ACF /* UIView+WebCacheOperation.m in Sources */,
 				F3A92DDB1D41FA4A00F36CD0 /* MJRefreshFooter.m in Sources */,
+				EC0623A51DFA550E007A25B6 /* UITextField+TCCustomFont.m in Sources */,
 				F3D2BD821D3F59E600925002 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
 				EC5642441DF95DE90058871B /* Aspects.m in Sources */,
+				EC06239D1DFA550E007A25B6 /* CSAnimation.m in Sources */,
 				F3D2BD631D3F59DA00925002 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F3D2BDFD1D3F5A7500925002 /* UITextView+Placeholder.m in Sources */,
 				F3D2BDAD1D3F59F400925002 /* IQSegmentedNextPrevious.m in Sources */,
