@@ -129,19 +129,26 @@
         
         [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        
     }else{
-    
+        
         [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:nil];
+        
     }
-    self.edgesForExtendedLayout = UIRectEdgeAll;
-    if (!self.navagationBarLucency) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    if (self.navagationBarLucency||self.navagationBarHiden) {
+        self.edgesForExtendedLayout = UIRectEdgeAll;
     }
-    //配置navagationbar的属性
-    [self.navigationController setNavigationBarHidden:_navagationBarHiden animated:YES];
-    self.navigationController.navigationBar.barTintColor = self.navagationBarColor?: [UIColor whiteColor];
-    self.navigationController.navigationBar.tintColor =self.navagationBarTextColor?: [UIColor blackColor];
+    
+    if (self.navagationBarHiden) {
+        [self.navigationController.view sendSubviewToBack:self.navigationController.navigationBar];
+    }else{
+        [self.navigationController.view bringSubviewToFront:self.navigationController.navigationBar];
+    }
+    self.navigationController.navigationBar.barTintColor = self.navagationBarColor?: [UIColor blackColor];
+    self.navigationController.navigationBar.tintColor =self.navagationBarTextColor?: [UIColor whiteColor];
     NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:self.navagationBarTextColor?:[UIColor blackColor],NSForegroundColorAttributeName,nil];
     [self.navigationController.navigationBar setTitleTextAttributes:attributes];
     
@@ -180,7 +187,7 @@
     CGRect rect = self . navigationController . navigationBar . frame ;
     self . navigationController . navigationBar . frame = CGRectMake ( rect . origin . x , rect . origin . y , rect . size . width , self.navagationBarHeight ) ;
     
-
+    
     [self.navigationController.navigationBar setTitleVerticalPositionAdjustment:44-self.navagationBarHeight forBarMetrics:UIBarMetricsDefault];
     
     [self.navigationItem.backBarButtonItem setBackgroundVerticalPositionAdjustment:44-self.navagationBarHeight forBarMetrics:UIBarMetricsDefault];
@@ -195,20 +202,33 @@
     if (navagationBarLucency) {
         [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        
     }else{
         //配置navagationbar的属性
         [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:nil];
+        
     }
-    self.edgesForExtendedLayout = UIRectEdgeAll;
-    if (!_navagationBarLucency) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    if (self.navagationBarLucency||self.navagationBarHiden) {
+        self.edgesForExtendedLayout = UIRectEdgeAll;
     }
 }
 
 - (void)setNavagationBarHiden:(BOOL)navagationBarHiden{
     _navagationBarHiden = navagationBarHiden;
-    [self.navigationController setNavigationBarHidden:navagationBarHiden animated:YES];
+    if (_navagationBarHiden) {
+        [self.navigationController.view sendSubviewToBack:self.navigationController.navigationBar];
+    }else{
+        [self.navigationController.view bringSubviewToFront:self.navigationController.navigationBar];
+    }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    if (self.navagationBarLucency||self.navagationBarHiden) {
+        self.edgesForExtendedLayout = UIRectEdgeAll;
+    }
 }
 
 //
