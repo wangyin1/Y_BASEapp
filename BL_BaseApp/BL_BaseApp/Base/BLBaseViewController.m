@@ -139,7 +139,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     if (self.navagationBarLucency||self.navagationBarHiden) {
-        self.edgesForExtendedLayout = UIRectEdgeAll;
+        self.edgesForExtendedLayout = UIRectEdgeTop;
     }
     
     if (self.navagationBarHiden) {
@@ -149,7 +149,7 @@
     }
     self.navigationController.navigationBar.barTintColor = self.navagationBarColor?: [UIColor blackColor];
     self.navigationController.navigationBar.tintColor =self.navagationBarTextColor?: [UIColor whiteColor];
-    NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:self.navagationBarTextColor?:[UIColor blackColor],NSForegroundColorAttributeName,nil];
+    NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:self.navagationBarTextColor?:[UIColor whiteColor],NSForegroundColorAttributeName,nil];
     [self.navigationController.navigationBar setTitleTextAttributes:attributes];
     
     [self _setNavagationBarHeight];
@@ -213,7 +213,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     if (self.navagationBarLucency||self.navagationBarHiden) {
-        self.edgesForExtendedLayout = UIRectEdgeAll;
+        self.edgesForExtendedLayout = UIRectEdgeTop;
     }
 }
 
@@ -227,7 +227,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     if (self.navagationBarLucency||self.navagationBarHiden) {
-        self.edgesForExtendedLayout = UIRectEdgeAll;
+        self.edgesForExtendedLayout = UIRectEdgeTop;
     }
 }
 
