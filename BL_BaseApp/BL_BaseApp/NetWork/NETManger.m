@@ -37,13 +37,13 @@
     
     NSMutableDictionary *params = [basePram mutableCopy];
     //根据情况增加全局参数
-//    [params setObject:TOKEN forKey:@"token"];
+    //    [params setObject:TOKEN forKey:@"token"];
     NSString *postUrl =[NSString stringWithFormat:@"%@%@",BASEURL,url];
     [manager POST:postUrl parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
      {
          for (NSString *key  in imageParm) {
              NSData * imageData =  [imageParm[key] isKindOfClass:[NSData class]]?imageParm[key]:[(UIImage *)imageParm[key] compressToSize:1024];
-                        
+             
              // 上传filename
              NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
              // 设置时间格式
@@ -56,8 +56,6 @@
      }
           success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         
-         
          if (sucessBlock) {
              id object = [operation.responseString objectFromJSONString];
              if ([object[@"status"] integerValue]!=1) {
@@ -89,17 +87,17 @@
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         
         [manager POST:[NSString stringWithFormat:@"%@%@/api.php?%@",URLTYPE,BASEURL,@"api=system&method=upload_media_item"] parameters:@{@"module":@"customer"}  constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-
-                NSData * imageData =  [imageParm[key] isKindOfClass:[NSData class]]?imageParm[key]:[imageParm[key] compressToSize:1024];
-                NSData *newData = imageData;
-                // 上传filename
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                // 设置时间格式
-                formatter.dateFormat = @"yyyyMMddHHmmss";
-                NSString *str = [formatter stringFromDate:[NSDate date]];
-                NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
-                [formData appendPartWithFileData:newData name:@"module" fileName:fileName mimeType:@"image/jpeg"];
-
+            
+            NSData * imageData =  [imageParm[key] isKindOfClass:[NSData class]]?imageParm[key]:[imageParm[key] compressToSize:1024];
+            NSData *newData = imageData;
+            // 上传filename
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            // 设置时间格式
+            formatter.dateFormat = @"yyyyMMddHHmmss";
+            NSString *str = [formatter stringFromDate:[NSDate date]];
+            NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
+            [formData appendPartWithFileData:newData name:@"module" fileName:fileName mimeType:@"image/jpeg"];
+            
         } success:^(NSURLSessionDataTask *task, id responseObject) {
             
             
@@ -108,7 +106,7 @@
             if (failerBlock) {
                 failerBlock(error.localizedDescription);
             }
-
+            
         }];
     }
 }

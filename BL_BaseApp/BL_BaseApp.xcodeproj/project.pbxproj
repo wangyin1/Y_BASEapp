@@ -17,6 +17,11 @@
 		EC0623A51DFA550E007A25B6 /* UITextField+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06239A1DFA550E007A25B6 /* UITextField+TCCustomFont.m */; };
 		EC0623A61DFA550E007A25B6 /* UITextView+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */; };
 		EC0623A91DFA5975007A25B6 /* UIView+Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */; };
+		EC329E361E28C5B600894989 /* UIColor+YTZGetColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E2B1E28C5B600894989 /* UIColor+YTZGetColour.m */; };
+		EC329E371E28C5B600894989 /* UIImage+YTZEqualImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E2D1E28C5B600894989 /* UIImage+YTZEqualImage.m */; };
+		EC329E381E28C5B600894989 /* YTZImageRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E301E28C5B600894989 /* YTZImageRecognition.m */; };
+		EC329E391E28C5B600894989 /* YTZLocalMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E321E28C5B600894989 /* YTZLocalMaximum.m */; };
+		EC329E3A1E28C5B600894989 /* YTZMainColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E351E28C5B600894989 /* YTZMainColour.m */; };
 		EC5642401DF948390058871B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EC56423F1DF948390058871B /* MBProgressHUD.m */; };
 		EC5642441DF95DE90058871B /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5642431DF95DE90058871B /* Aspects.m */; };
 		F320BB141D670F5B00C65367 /* LFUIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = F320BB131D670F5B00C65367 /* LFUIView+Badge.m */; };
@@ -260,6 +265,18 @@
 		EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TCCustomFont.m"; sourceTree = "<group>"; };
 		EC0623A71DFA5975007A25B6 /* UIView+Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Canvas.h"; sourceTree = "<group>"; };
 		EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Canvas.m"; sourceTree = "<group>"; };
+		EC329E2A1E28C5B600894989 /* UIColor+YTZGetColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YTZGetColour.h"; sourceTree = "<group>"; };
+		EC329E2B1E28C5B600894989 /* UIColor+YTZGetColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YTZGetColour.m"; sourceTree = "<group>"; };
+		EC329E2C1E28C5B600894989 /* UIImage+YTZEqualImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YTZEqualImage.h"; sourceTree = "<group>"; };
+		EC329E2D1E28C5B600894989 /* UIImage+YTZEqualImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YTZEqualImage.m"; sourceTree = "<group>"; };
+		EC329E2E1E28C5B600894989 /* YTZImageComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTZImageComparison.h; sourceTree = "<group>"; };
+		EC329E2F1E28C5B600894989 /* YTZImageRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTZImageRecognition.h; sourceTree = "<group>"; };
+		EC329E301E28C5B600894989 /* YTZImageRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTZImageRecognition.m; sourceTree = "<group>"; };
+		EC329E311E28C5B600894989 /* YTZLocalMaximum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTZLocalMaximum.h; sourceTree = "<group>"; };
+		EC329E321E28C5B600894989 /* YTZLocalMaximum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTZLocalMaximum.m; sourceTree = "<group>"; };
+		EC329E331E28C5B600894989 /* YTZMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTZMacro.h; sourceTree = "<group>"; };
+		EC329E341E28C5B600894989 /* YTZMainColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTZMainColour.h; sourceTree = "<group>"; };
+		EC329E351E28C5B600894989 /* YTZMainColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTZMainColour.m; sourceTree = "<group>"; };
 		EC56423E1DF948390058871B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		EC56423F1DF948390058871B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		EC5642421DF95DE90058871B /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
@@ -723,6 +740,25 @@
 				EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */,
 			);
 			path = CanvasLibrary;
+			sourceTree = "<group>";
+		};
+		EC329E291E28C5B600894989 /* YTZImageComparison */ = {
+			isa = PBXGroup;
+			children = (
+				EC329E2A1E28C5B600894989 /* UIColor+YTZGetColour.h */,
+				EC329E2B1E28C5B600894989 /* UIColor+YTZGetColour.m */,
+				EC329E2C1E28C5B600894989 /* UIImage+YTZEqualImage.h */,
+				EC329E2D1E28C5B600894989 /* UIImage+YTZEqualImage.m */,
+				EC329E2E1E28C5B600894989 /* YTZImageComparison.h */,
+				EC329E2F1E28C5B600894989 /* YTZImageRecognition.h */,
+				EC329E301E28C5B600894989 /* YTZImageRecognition.m */,
+				EC329E311E28C5B600894989 /* YTZLocalMaximum.h */,
+				EC329E321E28C5B600894989 /* YTZLocalMaximum.m */,
+				EC329E331E28C5B600894989 /* YTZMacro.h */,
+				EC329E341E28C5B600894989 /* YTZMainColour.h */,
+				EC329E351E28C5B600894989 /* YTZMainColour.m */,
+			);
+			path = YTZImageComparison;
 			sourceTree = "<group>";
 		};
 		EC56423D1DF948320058871B /* MBProgressHUD */ = {
@@ -1313,6 +1349,7 @@
 		F3D2BCD71D3F574D00925002 /* Utils（控件封装和实用工具） */ = {
 			isa = PBXGroup;
 			children = (
+				EC329E291E28C5B600894989 /* YTZImageComparison */,
 				EC0623871DFA550E007A25B6 /* CanvasLibrary */,
 				EC5642411DF95DDE0058871B /* Aspects */,
 				EC56423D1DF948320058871B /* MBProgressHUD */,
@@ -1758,6 +1795,7 @@
 				F3AA21611D43C0CF00213ACF /* UIView+frame.m in Sources */,
 				F3A92DA41D41F7FC00F36CD0 /* UIButton+AFNetworking.m in Sources */,
 				EC06239F1DFA550E007A25B6 /* CSBlurView.m in Sources */,
+				EC329E371E28C5B600894989 /* UIImage+YTZEqualImage.m in Sources */,
 				F3D2BD811D3F59E600925002 /* JGProgressHUDFadeAnimation.m in Sources */,
 				F3AA211C1D43237E00213ACF /* UIImageView+HighlightedWebCache.m in Sources */,
 				F3AA21131D43237E00213ACF /* SDWebImageDecoder.m in Sources */,
@@ -1815,14 +1853,17 @@
 				F3AA211D1D43237E00213ACF /* UIImageView+WebCache.m in Sources */,
 				F35FAFD51D7D499500D2907E /* NSDictionary+Category.m in Sources */,
 				F3A92DA91D41F7FC00F36CD0 /* WHJSON.m in Sources */,
+				EC329E391E28C5B600894989 /* YTZLocalMaximum.m in Sources */,
 				F3D316EB1D76921E008C5788 /* BLDrawView.m in Sources */,
 				F3A92DDC1D41FA4A00F36CD0 /* MJRefreshHeader.m in Sources */,
 				F3BA447B1D6D48F600908310 /* JPEngine.m in Sources */,
 				F3D2BD861D3F59E600925002 /* JGProgressHUDRingIndicatorView.m in Sources */,
 				F3D2BC671D3F4D2900925002 /* AppDelegate.m in Sources */,
 				F389D9BE1D44608500476C23 /* XHLaunchAd.m in Sources */,
+				EC329E381E28C5B600894989 /* YTZImageRecognition.m in Sources */,
 				EC0623A11DFA550E007A25B6 /* UIButton+TCCustomFont.m in Sources */,
 				F3D2BDA91D3F59F400925002 /* IQUIView+Hierarchy.m in Sources */,
+				EC329E361E28C5B600894989 /* UIColor+YTZGetColour.m in Sources */,
 				F3AA210F1D43237E00213ACF /* MKAnnotationView+WebCache.m in Sources */,
 				F3D2BD641D3F59DA00925002 /* View+MASAdditions.m in Sources */,
 				F3D2BD401D3F59D000925002 /* NSObject+MJProperty.m in Sources */,
@@ -1895,6 +1936,7 @@
 				F3D2BD391D3F59D000925002 /* MJFoundation.m in Sources */,
 				F3A92DDF1D41FA4A00F36CD0 /* MJRefreshAutoStateFooter.m in Sources */,
 				F3A92D9F1D41F7FC00F36CD0 /* AFURLResponseSerialization.m in Sources */,
+				EC329E3A1E28C5B600894989 /* YTZMainColour.m in Sources */,
 				F3D2BDFC1D3F5A7500925002 /* UIImage+TOOL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
