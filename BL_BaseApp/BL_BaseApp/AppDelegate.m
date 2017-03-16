@@ -32,6 +32,7 @@
     self.window.backgroundColor = [UIColor clearColor];
     [self setWindowRootViewController];
     [self.window makeKeyAndVisible];
+    
     [self initADView];//初始化启动广告控件
     //设置补丁下载地址
     [BLJSPatchManager setPatchUrl:[JSPATCHURL copy]];

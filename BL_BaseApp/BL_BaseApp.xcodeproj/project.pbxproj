@@ -17,6 +17,7 @@
 		EC0623A51DFA550E007A25B6 /* UITextField+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06239A1DFA550E007A25B6 /* UITextField+TCCustomFont.m */; };
 		EC0623A61DFA550E007A25B6 /* UITextView+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */; };
 		EC0623A91DFA5975007A25B6 /* UIView+Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */; };
+		EC2339FC1E7A361700E17089 /* UIView+YinBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2339FB1E7A361700E17089 /* UIView+YinBorder.m */; };
 		EC329E361E28C5B600894989 /* UIColor+YTZGetColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E2B1E28C5B600894989 /* UIColor+YTZGetColour.m */; };
 		EC329E371E28C5B600894989 /* UIImage+YTZEqualImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E2D1E28C5B600894989 /* UIImage+YTZEqualImage.m */; };
 		EC329E381E28C5B600894989 /* YTZImageRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E301E28C5B600894989 /* YTZImageRecognition.m */; };
@@ -24,10 +25,23 @@
 		EC329E3A1E28C5B600894989 /* YTZMainColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E351E28C5B600894989 /* YTZMainColour.m */; };
 		EC5642401DF948390058871B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EC56423F1DF948390058871B /* MBProgressHUD.m */; };
 		EC5642441DF95DE90058871B /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5642431DF95DE90058871B /* Aspects.m */; };
+		ECCC23331E77C4EB00B99654 /* AJGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC231B1E77C4EB00B99654 /* AJGradientView.m */; };
+		ECCC23341E77C4EB00B99654 /* AJPhotoGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC231D1E77C4EB00B99654 /* AJPhotoGroupCell.m */; };
+		ECCC23351E77C4EB00B99654 /* AJPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC231F1E77C4EB00B99654 /* AJPhotoGroupView.m */; };
+		ECCC23361E77C4EB00B99654 /* AJPhotoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23211E77C4EB00B99654 /* AJPhotoListCell.m */; };
+		ECCC23371E77C4EB00B99654 /* AJPhotoListCellTapView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23231E77C4EB00B99654 /* AJPhotoListCellTapView.m */; };
+		ECCC23381E77C4EB00B99654 /* AJPhotoListView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23251E77C4EB00B99654 /* AJPhotoListView.m */; };
+		ECCC23391E77C4EB00B99654 /* AJPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23271E77C4EB00B99654 /* AJPhotoPickerViewController.m */; };
+		ECCC233A1E77C4EB00B99654 /* BoPhotoPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECCC23281E77C4EB00B99654 /* BoPhotoPicker.bundle */; };
+		ECCC233B1E77C4EB00B99654 /* AJPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC232C1E77C4EB00B99654 /* AJPhotoBrowserViewController.m */; };
+		ECCC233C1E77C4EB00B99654 /* AJPhotoTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC232E1E77C4EB00B99654 /* AJPhotoTapDetectingImageView.m */; };
+		ECCC233D1E77C4EB00B99654 /* AJPhotoZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23301E77C4EB00B99654 /* AJPhotoZoomingScrollView.m */; };
+		ECCC233E1E77C4EB00B99654 /* AJTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23321E77C4EB00B99654 /* AJTapDetectingView.m */; };
+		ECFB0AB81E763A410090AE71 /* jcore-ios-1.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFB0AB51E763A410090AE71 /* jcore-ios-1.1.1.a */; };
+		ECFB0AB91E763A410090AE71 /* jpush-ios-3.0.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFB0AB61E763A410090AE71 /* jpush-ios-3.0.2.a */; };
 		F320BB141D670F5B00C65367 /* LFUIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = F320BB131D670F5B00C65367 /* LFUIView+Badge.m */; };
 		F320BB181D6713D700C65367 /* LFUIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = F320BB171D6713D700C65367 /* LFUIView+Add.m */; };
 		F32228CB1D8F8F0400283270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F32228CA1D8F8F0400283270 /* Assets.xcassets */; };
-		F32228D11D8FDD8100283270 /* jpush-ios-2.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F32228D01D8FDD8100283270 /* jpush-ios-2.1.9.a */; };
 		F32228D41D8FDDE600283270 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32228D31D8FDDE600283270 /* UserNotifications.framework */; };
 		F32228D61D8FDDF300283270 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32228D51D8FDDF300283270 /* AdSupport.framework */; };
 		F32228D91D8FDE3D00283270 /* JPUSHService+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = F32228D81D8FDE3D00283270 /* JPUSHService+Tool.m */; };
@@ -265,6 +279,8 @@
 		EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TCCustomFont.m"; sourceTree = "<group>"; };
 		EC0623A71DFA5975007A25B6 /* UIView+Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Canvas.h"; sourceTree = "<group>"; };
 		EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Canvas.m"; sourceTree = "<group>"; };
+		EC2339FA1E7A361700E17089 /* UIView+YinBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YinBorder.h"; sourceTree = "<group>"; };
+		EC2339FB1E7A361700E17089 /* UIView+YinBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YinBorder.m"; sourceTree = "<group>"; };
 		EC329E2A1E28C5B600894989 /* UIColor+YTZGetColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YTZGetColour.h"; sourceTree = "<group>"; };
 		EC329E2B1E28C5B600894989 /* UIColor+YTZGetColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YTZGetColour.m"; sourceTree = "<group>"; };
 		EC329E2C1E28C5B600894989 /* UIImage+YTZEqualImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YTZEqualImage.h"; sourceTree = "<group>"; };
@@ -281,6 +297,32 @@
 		EC56423F1DF948390058871B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		EC5642421DF95DE90058871B /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		EC5642431DF95DE90058871B /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		ECCC231A1E77C4EB00B99654 /* AJGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJGradientView.h; sourceTree = "<group>"; };
+		ECCC231B1E77C4EB00B99654 /* AJGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJGradientView.m; sourceTree = "<group>"; };
+		ECCC231C1E77C4EB00B99654 /* AJPhotoGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoGroupCell.h; sourceTree = "<group>"; };
+		ECCC231D1E77C4EB00B99654 /* AJPhotoGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoGroupCell.m; sourceTree = "<group>"; };
+		ECCC231E1E77C4EB00B99654 /* AJPhotoGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoGroupView.h; sourceTree = "<group>"; };
+		ECCC231F1E77C4EB00B99654 /* AJPhotoGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoGroupView.m; sourceTree = "<group>"; };
+		ECCC23201E77C4EB00B99654 /* AJPhotoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoListCell.h; sourceTree = "<group>"; };
+		ECCC23211E77C4EB00B99654 /* AJPhotoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoListCell.m; sourceTree = "<group>"; };
+		ECCC23221E77C4EB00B99654 /* AJPhotoListCellTapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoListCellTapView.h; sourceTree = "<group>"; };
+		ECCC23231E77C4EB00B99654 /* AJPhotoListCellTapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoListCellTapView.m; sourceTree = "<group>"; };
+		ECCC23241E77C4EB00B99654 /* AJPhotoListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoListView.h; sourceTree = "<group>"; };
+		ECCC23251E77C4EB00B99654 /* AJPhotoListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoListView.m; sourceTree = "<group>"; };
+		ECCC23261E77C4EB00B99654 /* AJPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoPickerViewController.h; sourceTree = "<group>"; };
+		ECCC23271E77C4EB00B99654 /* AJPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoPickerViewController.m; sourceTree = "<group>"; };
+		ECCC23281E77C4EB00B99654 /* BoPhotoPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BoPhotoPicker.bundle; sourceTree = "<group>"; };
+		ECCC232B1E77C4EB00B99654 /* AJPhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoBrowserViewController.h; sourceTree = "<group>"; };
+		ECCC232C1E77C4EB00B99654 /* AJPhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		ECCC232D1E77C4EB00B99654 /* AJPhotoTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoTapDetectingImageView.h; sourceTree = "<group>"; };
+		ECCC232E1E77C4EB00B99654 /* AJPhotoTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoTapDetectingImageView.m; sourceTree = "<group>"; };
+		ECCC232F1E77C4EB00B99654 /* AJPhotoZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoZoomingScrollView.h; sourceTree = "<group>"; };
+		ECCC23301E77C4EB00B99654 /* AJPhotoZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoZoomingScrollView.m; sourceTree = "<group>"; };
+		ECCC23311E77C4EB00B99654 /* AJTapDetectingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJTapDetectingView.h; sourceTree = "<group>"; };
+		ECCC23321E77C4EB00B99654 /* AJTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJTapDetectingView.m; sourceTree = "<group>"; };
+		ECFB0AB51E763A410090AE71 /* jcore-ios-1.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.1.a"; sourceTree = "<group>"; };
+		ECFB0AB61E763A410090AE71 /* jpush-ios-3.0.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.2.a"; sourceTree = "<group>"; };
+		ECFB0AB71E763A410090AE71 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		F320BB121D670F5B00C65367 /* LFUIView+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LFUIView+Badge.h"; sourceTree = "<group>"; };
 		F320BB131D670F5B00C65367 /* LFUIView+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LFUIView+Badge.m"; sourceTree = "<group>"; };
 		F320BB151D67121300C65367 /* BLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLMacro.h; sourceTree = "<group>"; };
@@ -288,8 +330,6 @@
 		F320BB171D6713D700C65367 /* LFUIView+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LFUIView+Add.m"; sourceTree = "<group>"; };
 		F32228C91D8F8DC100283270 /* BL_BaseApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BL_BaseApp.entitlements; sourceTree = "<group>"; };
 		F32228CA1D8F8F0400283270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F32228CF1D8FDD8100283270 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
-		F32228D01D8FDD8100283270 /* jpush-ios-2.1.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.9.a"; sourceTree = "<group>"; };
 		F32228D31D8FDDE600283270 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		F32228D51D8FDDF300283270 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F32228D71D8FDE3D00283270 /* JPUSHService+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPUSHService+Tool.h"; sourceTree = "<group>"; };
@@ -662,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F32228D61D8FDDF300283270 /* AdSupport.framework in Frameworks */,
+				ECFB0AB81E763A410090AE71 /* jcore-ios-1.1.1.a in Frameworks */,
 				F32228D41D8FDDE600283270 /* UserNotifications.framework in Frameworks */,
 				F3D2BCD41D3F55D100925002 /* libiconv.tbd in Frameworks */,
 				F3D2BCD21D3F55C300925002 /* CoreGraphics.framework in Frameworks */,
@@ -672,6 +713,7 @@
 				F3D2BCC81D3F54FC00925002 /* AssetsLibrary.framework in Frameworks */,
 				F3D2BCC61D3F54F700925002 /* MapKit.framework in Frameworks */,
 				F3D2BCC41D3F54EF00925002 /* MessageUI.framework in Frameworks */,
+				ECFB0AB91E763A410090AE71 /* jpush-ios-3.0.2.a in Frameworks */,
 				F3D2BCC21D3F54E800925002 /* libresolv.tbd in Frameworks */,
 				F3D2BCC01D3F54DE00925002 /* ImageIO.framework in Frameworks */,
 				F3D2BCBE1D3F54D800925002 /* MobileCoreServices.framework in Frameworks */,
@@ -683,7 +725,6 @@
 				F3D2BCB11D3F54A300925002 /* CoreTelephony.framework in Frameworks */,
 				F3D2BCB21D3F54A300925002 /* CoreText.framework in Frameworks */,
 				F3D2BCAE1D3F549A00925002 /* libz.tbd in Frameworks */,
-				F32228D11D8FDD8100283270 /* jpush-ios-2.1.9.a in Frameworks */,
 				F3D2BCAC1D3F549400925002 /* LocalAuthentication.framework in Frameworks */,
 				F3D2BCAA1D3F548A00925002 /* CFNetwork.framework in Frameworks */,
 				F3D2BCA81D3F546F00925002 /* libstdc++.tbd in Frameworks */,
@@ -779,13 +820,60 @@
 			path = Aspects;
 			sourceTree = "<group>";
 		};
+		ECCC23191E77C4EB00B99654 /* AJPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				ECCC231A1E77C4EB00B99654 /* AJGradientView.h */,
+				ECCC231B1E77C4EB00B99654 /* AJGradientView.m */,
+				ECCC231C1E77C4EB00B99654 /* AJPhotoGroupCell.h */,
+				ECCC231D1E77C4EB00B99654 /* AJPhotoGroupCell.m */,
+				ECCC231E1E77C4EB00B99654 /* AJPhotoGroupView.h */,
+				ECCC231F1E77C4EB00B99654 /* AJPhotoGroupView.m */,
+				ECCC23201E77C4EB00B99654 /* AJPhotoListCell.h */,
+				ECCC23211E77C4EB00B99654 /* AJPhotoListCell.m */,
+				ECCC23221E77C4EB00B99654 /* AJPhotoListCellTapView.h */,
+				ECCC23231E77C4EB00B99654 /* AJPhotoListCellTapView.m */,
+				ECCC23241E77C4EB00B99654 /* AJPhotoListView.h */,
+				ECCC23251E77C4EB00B99654 /* AJPhotoListView.m */,
+				ECCC23261E77C4EB00B99654 /* AJPhotoPickerViewController.h */,
+				ECCC23271E77C4EB00B99654 /* AJPhotoPickerViewController.m */,
+				ECCC23281E77C4EB00B99654 /* BoPhotoPicker.bundle */,
+				ECCC23291E77C4EB00B99654 /* Vendor */,
+			);
+			path = AJPhotoPicker;
+			sourceTree = "<group>";
+		};
+		ECCC23291E77C4EB00B99654 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				ECCC232A1E77C4EB00B99654 /* AJPhotoBrowser */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		ECCC232A1E77C4EB00B99654 /* AJPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				ECCC232B1E77C4EB00B99654 /* AJPhotoBrowserViewController.h */,
+				ECCC232C1E77C4EB00B99654 /* AJPhotoBrowserViewController.m */,
+				ECCC232D1E77C4EB00B99654 /* AJPhotoTapDetectingImageView.h */,
+				ECCC232E1E77C4EB00B99654 /* AJPhotoTapDetectingImageView.m */,
+				ECCC232F1E77C4EB00B99654 /* AJPhotoZoomingScrollView.h */,
+				ECCC23301E77C4EB00B99654 /* AJPhotoZoomingScrollView.m */,
+				ECCC23311E77C4EB00B99654 /* AJTapDetectingView.h */,
+				ECCC23321E77C4EB00B99654 /* AJTapDetectingView.m */,
+			);
+			path = AJPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		F32228CE1D8FDD7500283270 /* JPushTool（极光通知工具） */ = {
 			isa = PBXGroup;
 			children = (
-				F32228CF1D8FDD8100283270 /* JPUSHService.h */,
+				ECFB0AB51E763A410090AE71 /* jcore-ios-1.1.1.a */,
+				ECFB0AB61E763A410090AE71 /* jpush-ios-3.0.2.a */,
+				ECFB0AB71E763A410090AE71 /* JPUSHService.h */,
 				F32228D71D8FDE3D00283270 /* JPUSHService+Tool.h */,
 				F32228D81D8FDE3D00283270 /* JPUSHService+Tool.m */,
-				F32228D01D8FDD8100283270 /* jpush-ios-2.1.9.a */,
 			);
 			path = "JPushTool（极光通知工具）";
 			sourceTree = "<group>";
@@ -1298,6 +1386,8 @@
 				F3D316DF1D7689AC008C5788 /* 绘图 */,
 				F320BB121D670F5B00C65367 /* LFUIView+Badge.h */,
 				F320BB131D670F5B00C65367 /* LFUIView+Badge.m */,
+				EC2339FA1E7A361700E17089 /* UIView+YinBorder.h */,
+				EC2339FB1E7A361700E17089 /* UIView+YinBorder.m */,
 				F3CBA3F61D923C2300EC1467 /* UIView+NoData.h */,
 				F3CBA3F71D923C2300EC1467 /* UIView+NoData.m */,
 				F320BB161D6713D700C65367 /* LFUIView+Add.h */,
@@ -1349,6 +1439,7 @@
 		F3D2BCD71D3F574D00925002 /* Utils（控件封装和实用工具） */ = {
 			isa = PBXGroup;
 			children = (
+				ECCC23191E77C4EB00B99654 /* AJPhotoPicker */,
 				EC329E291E28C5B600894989 /* YTZImageComparison */,
 				EC0623871DFA550E007A25B6 /* CanvasLibrary */,
 				EC5642411DF95DDE0058871B /* Aspects */,
@@ -1733,6 +1824,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D2BD7B1D3F59E600925002 /* jg_hud_error.png in Resources */,
+				ECCC233A1E77C4EB00B99654 /* BoPhotoPicker.bundle in Resources */,
 				F3D2BDB31D3F59F400925002 /* IQKeyboardManager.bundle in Resources */,
 				F3BA447C1D6D48F600908310 /* JSPatch.js in Resources */,
 				F3A92DE61D41FA4A00F36CD0 /* MJRefresh.bundle in Resources */,
@@ -1837,6 +1929,7 @@
 				F3D2BDF81D3F5A7500925002 /* NSDictionary+Format.m in Sources */,
 				F3D2BDAE1D3F59F400925002 /* IQTextView.m in Sources */,
 				F389D9B31D4447B700476C23 /* FounctionChose.m in Sources */,
+				ECCC233C1E77C4EB00B99654 /* AJPhotoTapDetectingImageView.m in Sources */,
 				EC5642401DF948390058871B /* MBProgressHUD.m in Sources */,
 				F3D2BD841D3F59E600925002 /* JGProgressHUDIndicatorView.m in Sources */,
 				F3D2BDAA1D3F59F400925002 /* IQUIWindow+Hierarchy.m in Sources */,
@@ -1854,6 +1947,7 @@
 				F35FAFD51D7D499500D2907E /* NSDictionary+Category.m in Sources */,
 				F3A92DA91D41F7FC00F36CD0 /* WHJSON.m in Sources */,
 				EC329E391E28C5B600894989 /* YTZLocalMaximum.m in Sources */,
+				EC2339FC1E7A361700E17089 /* UIView+YinBorder.m in Sources */,
 				F3D316EB1D76921E008C5788 /* BLDrawView.m in Sources */,
 				F3A92DDC1D41FA4A00F36CD0 /* MJRefreshHeader.m in Sources */,
 				F3BA447B1D6D48F600908310 /* JPEngine.m in Sources */,
@@ -1869,7 +1963,9 @@
 				F3D2BD401D3F59D000925002 /* NSObject+MJProperty.m in Sources */,
 				F3AA21181D43237E00213ACF /* UIButton+WebCache.m in Sources */,
 				F3D2BD3E1D3F59D000925002 /* NSObject+MJCoding.m in Sources */,
+				ECCC233E1E77C4EB00B99654 /* AJTapDetectingView.m in Sources */,
 				F325FC9C1D6F48C90052E610 /* WLayOut.m in Sources */,
+				ECCC23361E77C4EB00B99654 /* AJPhotoListCell.m in Sources */,
 				F3AA21151D43237E00213ACF /* SDWebImageDownloaderOperation.m in Sources */,
 				F320BB181D6713D700C65367 /* LFUIView+Add.m in Sources */,
 				EC0623A41DFA550E007A25B6 /* UITextField+PlaceholderColor.m in Sources */,
@@ -1895,11 +1991,14 @@
 				F3A92DE21D41FA4A00F36CD0 /* MJRefreshBackStateFooter.m in Sources */,
 				F385F5081D630A8400028BAA /* UIWebView+BLSize.m in Sources */,
 				F3A92D991D41F7FC00F36CD0 /* AFHTTPRequestOperationManager.m in Sources */,
+				ECCC23351E77C4EB00B99654 /* AJPhotoGroupView.m in Sources */,
 				F3A92DA11D41F7FC00F36CD0 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				ECCC23341E77C4EB00B99654 /* AJPhotoGroupCell.m in Sources */,
 				F3A92DA21D41F7FC00F36CD0 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F3AA21601D43C0CF00213ACF /* HUToast.m in Sources */,
 				F3D2BD3A1D3F59D000925002 /* MJProperty.m in Sources */,
 				F345A8071D91280800BB9142 /* YINWebViewController.m in Sources */,
+				ECCC233B1E77C4EB00B99654 /* AJPhotoBrowserViewController.m in Sources */,
 				F34B000C1DBF0A0F00C34FED /* UIFont+PX.m in Sources */,
 				F3D2BE021D3F5AE900925002 /* ImagePlayerView.m in Sources */,
 				F3AA21541D43C0CF00213ACF /* HUPhotoBrowserCell.m in Sources */,
@@ -1908,9 +2007,11 @@
 				F3D2BD5F1D3F59DA00925002 /* MASLayoutConstraint.m in Sources */,
 				F3AA21241D4395D000213ACF /* WFirstVC.m in Sources */,
 				F3AA211E1D43237E00213ACF /* UIView+WebCacheOperation.m in Sources */,
+				ECCC23391E77C4EB00B99654 /* AJPhotoPickerViewController.m in Sources */,
 				F3A92DDB1D41FA4A00F36CD0 /* MJRefreshFooter.m in Sources */,
 				EC0623A51DFA550E007A25B6 /* UITextField+TCCustomFont.m in Sources */,
 				F3D2BD821D3F59E600925002 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
+				ECCC233D1E77C4EB00B99654 /* AJPhotoZoomingScrollView.m in Sources */,
 				EC5642441DF95DE90058871B /* Aspects.m in Sources */,
 				EC06239D1DFA550E007A25B6 /* CSAnimation.m in Sources */,
 				F3D2BD631D3F59DA00925002 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1924,6 +2025,7 @@
 				F3D2BD851D3F59E600925002 /* JGProgressHUDPieIndicatorView.m in Sources */,
 				F330D9781D6EE1E700C61555 /* BLGroupPhotoControl.m in Sources */,
 				F3BA44861D6D746300908310 /* BLWebViewController.m in Sources */,
+				ECCC23381E77C4EB00B99654 /* AJPhotoListView.m in Sources */,
 				F325FCA21D700E2A0052E610 /* BLGroupCollectionViewCell.m in Sources */,
 				F3A92DE91D41FA4A00F36CD0 /* UIScrollView+MJRefresh.m in Sources */,
 				F3AA21591D43C0CF00213ACF /* HUImagePickerCell.m in Sources */,
@@ -1936,8 +2038,10 @@
 				F3D2BD391D3F59D000925002 /* MJFoundation.m in Sources */,
 				F3A92DDF1D41FA4A00F36CD0 /* MJRefreshAutoStateFooter.m in Sources */,
 				F3A92D9F1D41F7FC00F36CD0 /* AFURLResponseSerialization.m in Sources */,
+				ECCC23371E77C4EB00B99654 /* AJPhotoListCellTapView.m in Sources */,
 				EC329E3A1E28C5B600894989 /* YTZMainColour.m in Sources */,
 				F3D2BDFC1D3F5A7500925002 /* UIImage+TOOL.m in Sources */,
+				ECCC23331E77C4EB00B99654 /* AJGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2086,7 +2190,7 @@
 					"$(PROJECT_DIR)/BL_BaseApp/Utils/JPushTool（极光通知工具）",
 					"$(PROJECT_DIR)/BL_BaseApp",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bolaa.BL-BaseApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2115,6 +2219,7 @@
 					"$(PROJECT_DIR)/BL_BaseApp/Utils/JPushTool（极光通知工具）",
 					"$(PROJECT_DIR)/BL_BaseApp",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bolaa.BL-BaseApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";

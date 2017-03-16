@@ -14,10 +14,10 @@
 #import "BLWebViewController.h"
 #import "UIView+ZQuartz.h"
 #import "TMCache.h"
-
+#import "UIView+YinBorder.h"
 @interface BLLoginViewController ()
 
-
+@property(nonatomic,strong)UIView       *sub;
 @property (nonatomic , strong) BLDrawView *gcontrol;
 
 @end
@@ -34,20 +34,60 @@
 //    }else{
 //        [JGProgressHUD showWithStr:@"请安装qq" WithTime:2];
 //    }
+    
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(50, 400, 200, 50)];
+    slider.maximumValue = 100;
+    slider.value = 100;
+    [slider y_makeBorderWithColor:[UIColor redColor] Radius:100 Inside:NO];
+    [slider addTarget:self action:@selector(changeSlider:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:slider];
+    
+    UIView *view = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 300, 200)];
+    view.backgroundColor = [UIColor blackColor];
+    
+    [view y_makeBorderWithColor:[UIColor blueColor] Width:20 Radius:50 Margin:0 Inside:NO];
+    [self.view addSubview:view];
+    self.sub = view;
+    
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.backgroundColor = [UIColor blackColor];
+    button.frame = CGRectMake(100, 300, 100, 50);
+    [button y_makeBorderWithColor:[UIColor orangeColor] Width:3 Radius:5 Margin:10 Inside:YES];
+    [button setTitle:@"点击" forState:0];
+    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
 
+- (void)buttonPressed:(UIButton *)sender{
+    //内外边框切换
+    [self.sub y_makeBorderWithColor:self.sub.y_borderColor Width:self.sub.y_borderWidth Radius:self.sub.y_radius Margin:self.sub.y_borderMargin Inside:!self.sub.y_inside];
+}
+
+- (void)changeSlider:(UISlider *)sender{
+    
+    //改变边框圆角
+     [sender y_makeBorderWithColor:[UIColor redColor] Radius:sender.value Inside:NO];
+    
+    //改变线条大小
+    [self.sub y_makeBorderWithColor:[UIColor blueColor] Width:sender.value/5.f Radius:50 Margin:0 Inside:self.sub.y_inside];
 }
 
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.sub.frame = CGRectMake(100, 100, 200, 200);
+}
 
 - (void)viewDidLoadFinish
 {
     [super viewDidLoadFinish];
     //九宫格控件
-    BLGroupPhotoControl *hopto = [[BLGroupPhotoControl alloc] initWithFrame:CGRectMake(0, 68, self.view.bounds.size.width, 10)];
-    hopto.images = @[@"http://scimg.jb51.net/allimg/160815/103-160Q509544OC.jpg",@"http://www.taopic.com/uploads/allimg/120421/107063-12042114025737.jpg"];//可传入本地图片和网络地址
-    hopto.canEdit = YES;//编辑状态，no为展示状态
-    [self.view addSubview:hopto];
-    
+//    BLGroupPhotoControl *hopto = [[BLGroupPhotoControl alloc] initWithFrame:CGRectMake(0, 68, self.view.bounds.size.width, 10)];
+//    hopto.images = @[@"http://scimg.jb51.net/allimg/160815/103-160Q509544OC.jpg",@"http://www.taopic.com/uploads/allimg/120421/107063-12042114025737.jpg"];//可传入本地图片和网络地址
+//    hopto.canEdit = YES;//编辑状态，no为展示状态
+//    [self.view addSubview:hopto];
+//    
     
 //    //选择图片方法，自带弹出底部选择器
 //    [BLChoseImagesControl showChoseImagesAlertWithMaxCount:3 GetImagesBlock:^(NSArray *images) {
