@@ -4,7 +4,7 @@
 //
 //  Created by 王印 on 16/7/23.
 //  Copyright © 2016年 王印. All rights reserved.
-//
+
 #import "UIViewController+HRAlertViewController.h"
 #import "BLChoseImagesControl.h"
 #import "BLLoginViewController.h"
@@ -14,49 +14,63 @@
 #import "BLWebViewController.h"
 #import "UIView+ZQuartz.h"
 #import "TMCache.h"
+#import "runtimeKit.h"
 #import "UIView+YinBorder.h"
+#import "YINAccount.h"
+
 @interface BLLoginViewController ()
 
 @property(nonatomic,strong)UIView       *sub;
 @property (nonatomic , strong) BLDrawView *gcontrol;
-
+@property(nonatomic,strong)UILabel      *label;
 @end
 
 @implementation BLLoginViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.title = @"登录";
+    self.navagationBarColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor greenColor];
     
+    YINAccount *model = [YINAccount mj_objectWithKeyValues:@{@"name":@"wy",@"phone":@"15683701836"}];
+    
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 200, 50)];
+    [self.view addSubview:self.label];
+    
+    __weak typeof(YINAccount *)weakmodel = model;
+    [model addObserver:self.label ValueChangeBlock:^() {
+        self.label.text = [weakmodel.name stringByAppendingString:weakmodel.phone];
+    }];
+    
+    [model reload];
 //    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]]) {
 //        
 //        [JGProgressHUD showWithStr:@"已安装qq" WithTime:2];
 //    }else{
 //        [JGProgressHUD showWithStr:@"请安装qq" WithTime:2];
 //    }
-    
-    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(50, 400, 200, 50)];
-    slider.maximumValue = 100;
-    slider.value = 100;
-    [slider y_makeBorderWithColor:[UIColor redColor] Radius:100 Inside:NO];
-    [slider addTarget:self action:@selector(changeSlider:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:slider];
-    
-    UIView *view = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 300, 200)];
-    view.backgroundColor = [UIColor blackColor];
-    
-    [view y_makeBorderWithColor:[UIColor blueColor] Width:20 Radius:50 Margin:0 Inside:NO];
-    [self.view addSubview:view];
-    self.sub = view;
-    
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.backgroundColor = [UIColor blackColor];
-    button.frame = CGRectMake(100, 300, 100, 50);
-    [button y_makeBorderWithColor:[UIColor orangeColor] Width:3 Radius:5 Margin:10 Inside:YES];
-    [button setTitle:@"点击" forState:0];
-    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+//    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(50, 400, 200, 50)];
+//    slider.maximumValue = 100;
+//    slider.value = 100;
+//    [slider y_makeBorderWithColor:[UIColor redColor] Radius:100 Inside:NO];
+//    [slider addTarget:self action:@selector(changeSlider:) forControlEvents:UIControlEventValueChanged];
+//    [self.view addSubview:slider];
+//    
+//    UIView *view = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 300, 200)];
+//    view.backgroundColor = [UIColor blackColor];
+//    
+//    [view y_makeBorderWithColor:[UIColor blueColor] Width:20 Radius:50 Margin:0 Inside:NO];
+//    [self.view addSubview:view];
+//    self.sub = view;
+//    
+//    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+//    button.backgroundColor = [UIColor blackColor];
+//    button.frame = CGRectMake(100, 300, 100, 50);
+//    [button y_makeBorderWithColor:[UIColor orangeColor] Width:3 Radius:5 Margin:10 Inside:YES];
+//    [button setTitle:@"点击" forState:0];
+//    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
 }
 
 - (void)buttonPressed:(UIButton *)sender{

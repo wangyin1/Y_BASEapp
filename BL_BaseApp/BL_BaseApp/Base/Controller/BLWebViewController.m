@@ -28,9 +28,6 @@
         [webView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none';" completionHandler:nil];
         // 禁用 长按弹出ActionSheet
         [webView evaluateJavaScript:@"document.documentElement.style.webkitTouchCallout='none';" completionHandler:nil];
-        
-        
-        
 
     }];
 }

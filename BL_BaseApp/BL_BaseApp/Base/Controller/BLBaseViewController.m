@@ -65,6 +65,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *back = [[UIBarButtonItem alloc]init];
     back.title = @"";
@@ -121,6 +122,24 @@
     [self.loadAnimationView.layer removeFromSuperlayer];
 }
 
+- (UIImage *)createImageColor:(UIColor *)color size:(CGSize)size {
+    //开启图形上下文
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    //绘制颜色区域
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, size.width, size.height)];
+    [color setFill];
+    [path fill];
+    //    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    //    CGContextSetFillColorWithColor(ctx, color.CGColor);
+    //    CGContextFillRect(ctx, CGRectMake(0, 0, size.width, size.height));
+    //从图形上下文获取图片
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    //关闭图形上下文
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -131,15 +150,17 @@
         [self.navigationController.navigationBar setShadowImage:[UIImage new]];
         
     }else{
-        
-        [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+        UIImage *imag = nil;
+      
+        [self.navigationController.navigationBar setBackgroundImage:imag forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:nil];
         
     }
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    
+    self.navigationController.navigationBar.translucent = NO;
     if (self.navagationBarLucency||self.navagationBarHiden) {
         self.edgesForExtendedLayout = UIRectEdgeTop;
+          self.navigationController.navigationBar.translucent = YES;
     }
     
     if (self.navagationBarHiden) {
@@ -235,6 +256,16 @@
 - (void)pushPage:(UIViewController *)viewController Animated:(BOOL)animated{
     if (self.navigationController) {
         [self.navigationController pushViewController:viewController animated:animated];
+    }
+}
+
+- (void)pushColseSelf:(UIViewController *)vc{
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    NSMutableArray *arr = [[self.navigationController viewControllers] mutableCopy];
+    if (arr.count>=2) {
+        [arr removeObjectAtIndex:arr.count-2];
+        self.navigationController.viewControllers = arr;
     }
 }
 

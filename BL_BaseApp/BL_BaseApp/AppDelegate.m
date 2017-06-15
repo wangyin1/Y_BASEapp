@@ -5,15 +5,16 @@
 //  Created by 王印 on 16/7/20.
 //  Copyright © 2016年 王印. All rights reserved.
 //
-#import "JPEngine.h"
+
 #import "WFirstVC.h"
 #import "AppDelegate.h"
 #import "BLLoginViewController.h"
 #import "XHLaunchAd.h"
-#import "BLJSPatchManager.h"
+
 #import "BaseTabarController.h"
-
-
+#import "runtimeKit.h"
+#import "Aspects.h"
+#import "MJExtension.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,7 @@
 
 
 @implementation AppDelegate
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -34,13 +36,9 @@
     [self.window makeKeyAndVisible];
     
     [self initADView];//初始化启动广告控件
-    //设置补丁下载地址
-    [BLJSPatchManager setPatchUrl:[JSPATCHURL copy]];
-    //下载补丁
-    [BLJSPatchManager start];
-    
+
     [self DIYSetting];
-    
+
     return YES;
 }
 

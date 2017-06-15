@@ -62,7 +62,7 @@
 #import "IQUIWindow+Hierarchy.h"
 #import "AppDelegate.h"
 #import "Masonry.h"
-#import "WHJSON.h"
+
 #import "NETManger.h"
 #import "MBProgressHUD.h"
 #import "Manager.h"

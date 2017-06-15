@@ -5,6 +5,7 @@
 //  Created by xgh on 16/1/20.
 //  Copyright © 2016年 王印. All rights reserved.
 //
+#import "MJExtension.h"
 #import "AppDelegate.h"
 #import "NETManger.h"
 #import "HttpTool.h"
@@ -57,7 +58,7 @@
           success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          if (sucessBlock) {
-             id object = [operation.responseString objectFromJSONString];
+             id object = [operation.responseString mj_JSONObject];
              if ([object[@"status"] integerValue]!=1) {
                  [MBProgressHUD showString:object[@"info"] duration:2];
              }

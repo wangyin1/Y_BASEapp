@@ -192,7 +192,13 @@
 {
     BOOL resultBOOL = [self callback_webViewShouldStartLoadWithRequest:navigationAction.request navigationType:navigationAction.navigationType];
     BOOL isLoadingDisableScheme = [self isLoadingWKWebViewDisableScheme:navigationAction.request.URL];
-
+    if ([navigationAction.request.URL.absoluteString containsString:@"itunes.apple.com"]) {
+        
+        [[UIApplication sharedApplication] openURL:navigationAction.request.URL];
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+        
+    }
     if (resultBOOL && !isLoadingDisableScheme) {
         self.currentRequest = navigationAction.request;
         if (navigationAction.targetFrame == nil) {
@@ -423,39 +429,39 @@
             return;
         }
 
-        WKWebView* webView = _realWebView;
-
-        NSString* jScript = @"var meta = document.createElement('meta'); \
-        meta.name = 'viewport'; \
-        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'; \
-        var head = document.getElementsByTagName('head')[0];\
-        head.appendChild(meta);";
-
-        WKUserContentController *userContentController = webView.configuration.userContentController;
-        NSMutableArray<WKUserScript *> *array = [userContentController.userScripts mutableCopy];
-        WKUserScript* fitWKUScript = nil;
-        for (WKUserScript* wkUScript in array) {
-            if ([wkUScript.source isEqual:jScript]) {
-                fitWKUScript = wkUScript;
-                break;
-            }
-        }
-        if (scalesPageToFit) {
-            if (!fitWKUScript) {
-                fitWKUScript = [[NSClassFromString(@"WKUserScript") alloc] initWithSource:jScript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
-                [userContentController addUserScript:fitWKUScript];
-            }
-        }
-        else {
-            if (fitWKUScript) {
-                [array removeObject:fitWKUScript];
-            }
-            ///没法修改数组 只能移除全部 再重新添加
-            [userContentController removeAllUserScripts];
-            for (WKUserScript* wkUScript in array) {
-                [userContentController addUserScript:wkUScript];
-            }
-        }
+//        WKWebView* webView = _realWebView;
+//
+//        NSString* jScript = @"var meta = document.createElement('meta'); \
+//        meta.name = 'viewport'; \
+//        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'; \
+//        var head = document.getElementsByTagName('head')[0];\
+//        head.appendChild(meta);";
+//
+//        WKUserContentController *userContentController = webView.configuration.userContentController;
+//        NSMutableArray<WKUserScript *> *array = [userContentController.userScripts mutableCopy];
+//        WKUserScript* fitWKUScript = nil;
+//        for (WKUserScript* wkUScript in array) {
+//            if ([wkUScript.source isEqual:jScript]) {
+//                fitWKUScript = wkUScript;
+//                break;
+//            }
+//        }
+//        if (scalesPageToFit) {
+//            if (!fitWKUScript) {
+//                fitWKUScript = [[NSClassFromString(@"WKUserScript") alloc] initWithSource:jScript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
+//                [userContentController addUserScript:fitWKUScript];
+//            }
+//        }
+//        else {
+//            if (fitWKUScript) {
+//                [array removeObject:fitWKUScript];
+//            }
+//            ///没法修改数组 只能移除全部 再重新添加
+//            [userContentController removeAllUserScripts];
+//            for (WKUserScript* wkUScript in array) {
+//                [userContentController addUserScript:wkUScript];
+//            }
+//        }
     }
     _scalesPageToFit = scalesPageToFit;
 }
