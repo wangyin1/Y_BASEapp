@@ -10,18 +10,11 @@
 #import <UIKit/UIKit.h>
 #import "MJExtension.h"
 
+
 @class YINModel;
 
-typedef void(^ModelMapingBlock)();
-
-
-
 //模型基类
-@interface YINModel : NSObject<NSCoding>
-
-
-
-
+@interface YINModel : NSObject<MJKeyValue,NSCoding,NSCopying>
 
 //获取属性列表 返回 ｛ivarName ivarType｝
 + (NSArray <NSDictionary *> *)getField;

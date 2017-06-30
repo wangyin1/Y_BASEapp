@@ -10,7 +10,7 @@
 #import "FounctionChose.h"
 #import "AJPhotoBrowserViewController.h"
 #import "AJPhotoPickerViewController.h"
-#import "JGProgressHUD.h"
+
 
 
 
@@ -149,7 +149,8 @@
 //超过最大选择项时
 - (void)photoPickerDidMaximum:(AJPhotoPickerViewController *)picker
 {
-    [JGProgressHUD showWithStr:@"超出最大范围" WithTime:2];
+    
+    [MBProgressHUD showError:@"超出最大范围"];
 }
 
 //取消

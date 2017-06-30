@@ -37,12 +37,7 @@
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 200, 50)];
     [self.view addSubview:self.label];
     
-    __weak typeof(YINAccount *)weakmodel = model;
-    [model addObserver:self.label ValueChangeBlock:^() {
-        self.label.text = [weakmodel.name stringByAppendingString:weakmodel.phone];
-    }];
     
-    [model reload];
 //    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]]) {
 //        
 //        [JGProgressHUD showWithStr:@"已安装qq" WithTime:2];

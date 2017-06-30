@@ -81,11 +81,10 @@
 #pragma mark 弹出登录页面
 - (void)showLoginViewController
 {
-    BLLoginViewController *loginViewController = [[BLLoginViewController alloc]init];
-    loginViewController.navagationBarColor = [UIColor orangeColor];
-    UINavigationController *naLoginViewController = [[UINavigationController alloc]initWithRootViewController:loginViewController];
-    [self.window setRootViewController:naLoginViewController];
+    
 }
+
+
 
 #pragma -- mark  强制调用系统键盘
 - (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier

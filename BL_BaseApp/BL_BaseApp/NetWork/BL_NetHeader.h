@@ -12,11 +12,17 @@
 /**
  *  基本服务器地址
  */
-static  const NSString *BASEURL = @"www.baidu.com";
+static   NSString *BASEURL = @"www.baidu.com";
+
 
 /**
- *  js补丁下载地址
+ https证书名 如果配置 则会在网络请求中使用证书验证
+ 
+ @return
  */
-static  const   NSString  *JSPATCHURL = @"";
+static     NSString  *SSLNAME = @"";
+
+
+
 
 #endif /* BL_NetHeader_h */

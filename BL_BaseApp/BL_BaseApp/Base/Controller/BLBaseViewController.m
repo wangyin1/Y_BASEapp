@@ -83,35 +83,35 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textDidChange:)name:UITextViewTextDidChangeNotification object:nil];
 }
 
-- (void)setRefreshView:(UIScrollView *)refreshView
-{
-    if (_refreshView!=refreshView) {
-        _refreshView = refreshView;
-        WEAKSELF
-        refreshView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [weakSelf headerRefreshRefreshView:refreshView];
-        }];
-        
-        refreshView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-            [weakSelf footerRefreshRefreshView:refreshView];
-        }];
-    }
-}
+//- (void)setRefreshView:(UIScrollView *)refreshView
+//{
+//    if (_refreshView!=refreshView) {
+//        _refreshView = refreshView;
+//        WEAKSELF
+//        refreshView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//            [weakSelf headerRefreshRefreshView:refreshView];
+//        }];
+//        
+//        refreshView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+//            [weakSelf footerRefreshRefreshView:refreshView];
+//        }];
+//    }
+//}
 
 - (void)textDidChange:(id)textView
 {
     
 }
 
-//下拉刷新
-- (void)headerRefreshRefreshView:(UIScrollView *)view{
-    NSLog(@"刷新");
-    [view.mj_header endRefreshing];
-}
-//上拉加载更多
-- (void)footerRefreshRefreshView:(UIScrollView *)view{
-    NSLog(@"加载更多");
-}
+////下拉刷新
+//- (void)headerRefreshRefreshView:(UIScrollView *)view{
+//    NSLog(@"刷新");
+//    
+//}
+////上拉加载更多
+//- (void)footerRefreshRefreshView:(UIScrollView *)view{
+//    NSLog(@"加载更多");
+//}
 
 - (void)showLoad{
     [self.loadAnimationView.layer removeFromSuperlayer];

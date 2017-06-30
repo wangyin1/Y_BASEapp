@@ -5,15 +5,16 @@
 //  Created by xgh on 16/1/20.
 //  Copyright © 2016年 王印. All rights reserved.
 //
+#import "HttpResult.h"
 
-typedef void(^NETsucess)(id reslut);
-typedef void(^NETfalier)(id reslut);
+
+typedef void(^NETsucess)(HttpResult *reslut);
+typedef void(^NETfalier)(HttpResult *reslut);
 
 #import <Foundation/Foundation.h>
 
 
 @interface NETManger : NSObject
-
 /**
  *  请求接口
  *
@@ -27,6 +28,4 @@ typedef void(^NETfalier)(id reslut);
 
 
 + (void)postUrl:(NSString *)url WithImageParm:(NSDictionary *)imageParm BasePram:(NSDictionary *)basePram SucessBlock:(NETsucess)sucessBlock FalierBlock:(NETfalier)falierBolck;
-
-+ (void)uploadImage:(NSDictionary *)imageParm Sucess:(NETsucess)sucessBlock Failer:(NETfalier)failerBlock;
 @end
