@@ -1,0 +1,6 @@
+framework module JRDB {
+  umbrella header "JRDB-umbrella.h"
+
+  export *
+  module * { export * }
+}
