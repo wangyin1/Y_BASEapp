@@ -22,9 +22,13 @@
         [self.bindPs enumerateObjectsUsingBlock:^(id  _Nonnull aobj, NSUInteger idx, BOOL * _Nonnull stop) {
             @try {
                 [weakSelf.obj addObserver:weakSelf forKeyPath:aobj options:NSKeyValueObservingOptionOld context:nil];
-                if (([weakSelf.obj isKindOfClass:[UITextView class]]||[weakSelf.obj isKindOfClass:[UITextField class]])&&[aobj isEqualToString:@"text"]) {
+                if (([weakSelf.obj isKindOfClass:[UIControl class]])&&[aobj isEqualToString:@"text"]) {
                     [(UIControl *)weakSelf.obj addTarget:weakSelf action:@selector(textChange:) forControlEvents:UIControlEventEditingChanged];
                 }
+                if (([weakSelf.obj isKindOfClass:[UIControl class]])&&[aobj isEqualToString:@"value"]) {
+                    [(UIControl *)weakSelf.obj addTarget:weakSelf action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
+                }
+                
             } @catch (NSException *exception) {
                 
             } @finally {
@@ -32,13 +36,16 @@
             }
         }];
     }else{
+        
+        if ([self.obj isKindOfClass:[UIControl class]]) {
+            [(UIControl *)self.obj addTarget:weakSelf action:@selector(textChange:) forControlEvents:UIControlEventEditingChanged];
+            [(UIControl *)self.obj addTarget:weakSelf action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
+        }
         [self.obj.class mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
             
             @try {
                 [weakSelf.obj addObserver:weakSelf forKeyPath:property.name options:NSKeyValueObservingOptionOld context:nil];
-                if (([weakSelf.obj isKindOfClass:[UITextView class]]||[weakSelf.obj isKindOfClass:[UITextField class]])&&[property.name isEqualToString:@"text"]) {
-                    [(UIControl *)weakSelf.obj addTarget:weakSelf action:@selector(textChange:) forControlEvents:UIControlEventEditingChanged];
-                }
+                
             } @catch (NSException *exception) {
                 
             } @finally {
@@ -48,6 +55,11 @@
     }
 }
 
+- (void)valueChange:(UIControl *)sender{
+    [self.mappings enumerateObjectsUsingBlock:^(YINMappingBlock  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj(self.obj,@"value");
+    }];
+}
 
 - (void)textChange:(UIControl *)sender{
     
