@@ -11,7 +11,7 @@
 #import "YINLoadingButton.h"
 #import "NSObject+YINMapping.h"
 #import "YINPerson.h"
-
+#import "ReactiveObjC.h"
 @interface LHDemoViewController ()<iCarouselDelegate,iCarouselDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet iCarousel *carousel;
@@ -31,18 +31,25 @@
     self.dataSource = @[@{@"title":@"aaaddd"},@{@"title":@"bbbbbb"},@{@"title":@"cccccc"},@{@"title":@"dddddd"},@{@"title":@"eeeeee"}].mutableCopy;
     [_carousel reloadData];
     
-    [self.carousel y_addBind:[YINBindObj obj:self keyPath:@"dataSource"] Mapping:^(NSObject *bind,NSString *property) {
+//    [self.carousel y_addBind:[YINBindObj obj:self keyPath:@"dataSource"] Mapping:^(NSObject *bind,NSString *property) {
+//         [_carousel reloadData];
+//    }];
+    
+    __weak typeof(self)weakSelf = self;
+    
+    [[RACObserve(self, dataSource) filter:^BOOL(id  _Nullable value) {
+        return  YES;
+    }]subscribeNext:^(id  _Nullable x) {
          [_carousel reloadData];
     }];
     
-    __weak typeof(self)weakSelf = self;
-    [self.label y_addBind:[YINBindObj obj:self.person] Mapping:^(NSObject *bind,NSString *property) {
-        weakSelf.label.text = [_person.name stringByAppendingString:_person.sex];
-    }];
-    
-    [self.label y_addBind:[YINBindObj obj:self.person keyPath:@"name"] Mapping:^(NSObject *bind, NSString *property) {
-         weakSelf.label.backgroundColor = arc4random()%2==1?[UIColor redColor]:[UIColor orangeColor];
-    }];
+//    [self.label y_addBind:[YINBindObj obj:self.person] Mapping:^(NSObject *bind,NSString *property) {
+//        weakSelf.label.text = [_person.name stringByAppendingString:_person.sex];
+//    }];
+//
+//    [self.label y_addBind:[YINBindObj obj:self.person keyPath:@"name"] Mapping:^(NSObject *bind, NSString *property) {
+//         weakSelf.label.backgroundColor = arc4random()%2==1?[UIColor redColor]:[UIColor orangeColor];
+//    }];
 }
 
 - (YINPerson *)person{

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D7F06DEADFA24EBFCE54A5EDAD1872B9"
+               BlueprintIdentifier = "79F9F2025FE9188D106EAA5D4745DAF6"
                BlueprintName = "JRDB"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "JRDB.framework">
+               BuildableName = "libJRDB.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

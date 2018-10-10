@@ -10,6 +10,9 @@
 		180E5D462153573E00540538 /* YINPlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E5D452153573E00540538 /* YINPlistTool.m */; };
 		180E5D492153593300540538 /* AFNetworkReachabilityManager+IPV6.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E5D482153593300540538 /* AFNetworkReachabilityManager+IPV6.m */; };
 		180E5D4C21535E3200540538 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E5D4B21535E3200540538 /* MBProgressHUD+MJ.m */; };
+		181056F9216080DC00AA6906 /* YINBindObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 181056F5216080DC00AA6906 /* YINBindObj.m */; };
+		181056FA216080DC00AA6906 /* NSObject+YINMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 181056F8216080DC00AA6906 /* NSObject+YINMapping.m */; };
+		18105703216D8F7500AA6906 /* NETWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18105702216D8F7500AA6906 /* NETWorkConfig.m */; };
 		1813D3081F73A34100D835E0 /* BLCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813D3061F73A34100D835E0 /* BLCarController.m */; };
 		1813D3091F73A34100D835E0 /* BLCarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1813D3071F73A34100D835E0 /* BLCarController.xib */; };
 		182D087C215C79900013CED0 /* YINRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D087B215C79900013CED0 /* YINRefreshTableView.m */; };
@@ -27,9 +30,7 @@
 		186CB5641FFC7A0E00D4D9BE /* YINScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5621FFC7A0E00D4D9BE /* YINScrollView.m */; };
 		187EB68A1F050A5F00DDD40A /* YINManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 187EB6891F050A5F00DDD40A /* YINManage.m */; };
 		189E6C3D215B70B900D70E03 /* YINLoadingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E6C3C215B70B900D70E03 /* YINLoadingButton.m */; };
-		18A0F930215CB8BD002C9531 /* NSObject+YINMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0F92F215CB8BD002C9531 /* NSObject+YINMapping.m */; };
 		18A0F934215DDB11002C9531 /* YINPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0F933215DDB11002C9531 /* YINPerson.m */; };
-		18A0F937215F13E0002C9531 /* YINBindObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0F936215F13E0002C9531 /* YINBindObj.m */; };
 		18C584F621536C2C00770958 /* LHDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C584F421536C2C00770958 /* LHDemoViewController.m */; };
 		18C584F721536C2C00770958 /* LHDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C584F521536C2C00770958 /* LHDemoViewController.xib */; };
 		18D38593204CE81100BA1977 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3858F204CE81100BA1977 /* GCDAsyncUdpSocket.m */; };
@@ -45,7 +46,7 @@
 		18E6236F1F720C6500D9B975 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E623211F72082900D9B975 /* libsqlite3.0.tbd */; };
 		18E623711F720C6500D9B975 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E623251F72082900D9B975 /* libstdc++.6.0.9.tbd */; };
 		18E7267A1F76396F002B62C6 /* LSRockingBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E726791F76396E002B62C6 /* LSRockingBarView.m */; };
-		8DF821B2EFE323FE1FA53CB6 /* Pods_BL_BaseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B116AD3D9F845C92DAF50DC /* Pods_BL_BaseApp.framework */; };
+		40369CB8BC86D1A68B8AA2EE /* libPods-BL_BaseApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E91D88E97FFDCBB5A2B5A3 /* libPods-BL_BaseApp.a */; };
 		EC06239D1DFA550E007A25B6 /* CSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06238A1DFA550E007A25B6 /* CSAnimation.m */; };
 		EC06239F1DFA550E007A25B6 /* CSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06238E1DFA550E007A25B6 /* CSBlurView.m */; };
 		EC0623A01DFA550E007A25B6 /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623901DFA550E007A25B6 /* CSNavigationController.m */; };
@@ -199,6 +200,12 @@
 		180E5D482153593300540538 /* AFNetworkReachabilityManager+IPV6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFNetworkReachabilityManager+IPV6.m"; sourceTree = "<group>"; };
 		180E5D4A21535E3200540538 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		180E5D4B21535E3200540538 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		181056F5216080DC00AA6906 /* YINBindObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YINBindObj.m; sourceTree = "<group>"; };
+		181056F6216080DC00AA6906 /* NSObject+YINMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YINMapping.h"; sourceTree = "<group>"; };
+		181056F7216080DC00AA6906 /* YINBindObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YINBindObj.h; sourceTree = "<group>"; };
+		181056F8216080DC00AA6906 /* NSObject+YINMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YINMapping.m"; sourceTree = "<group>"; };
+		18105701216D8F7500AA6906 /* NETWorkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NETWorkConfig.h; sourceTree = "<group>"; };
+		18105702216D8F7500AA6906 /* NETWorkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NETWorkConfig.m; sourceTree = "<group>"; };
 		1813D3051F73A34100D835E0 /* BLCarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCarController.h; sourceTree = "<group>"; };
 		1813D3061F73A34100D835E0 /* BLCarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCarController.m; sourceTree = "<group>"; };
 		1813D3071F73A34100D835E0 /* BLCarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLCarController.xib; sourceTree = "<group>"; };
@@ -229,16 +236,11 @@
 		189E6C3B215B70B900D70E03 /* YINLoadingButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YINLoadingButton.h; sourceTree = "<group>"; };
 		189E6C3C215B70B900D70E03 /* YINLoadingButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YINLoadingButton.m; sourceTree = "<group>"; };
 		189E6C3E215B87D500D70E03 /* YINUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YINUI.h; sourceTree = "<group>"; };
-		18A0F92E215CB8BD002C9531 /* NSObject+YINMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YINMapping.h"; sourceTree = "<group>"; };
-		18A0F92F215CB8BD002C9531 /* NSObject+YINMapping.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YINMapping.m"; sourceTree = "<group>"; };
 		18A0F932215DDB11002C9531 /* YINPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YINPerson.h; sourceTree = "<group>"; };
 		18A0F933215DDB11002C9531 /* YINPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YINPerson.m; sourceTree = "<group>"; };
-		18A0F935215F13DF002C9531 /* YINBindObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YINBindObj.h; sourceTree = "<group>"; };
-		18A0F936215F13E0002C9531 /* YINBindObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YINBindObj.m; sourceTree = "<group>"; };
 		18C584F321536C2C00770958 /* LHDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHDemoViewController.h; sourceTree = "<group>"; };
 		18C584F421536C2C00770958 /* LHDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHDemoViewController.m; sourceTree = "<group>"; };
 		18C584F521536C2C00770958 /* LHDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LHDemoViewController.xib; sourceTree = "<group>"; };
-		18C585C4215378CC00770958 /* BL_BaseAppDEV.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = BL_BaseAppDEV.plist; path = /Users/apple/Desktop/BL_BaseApp/BL_BaseAppDEV.plist; sourceTree = "<absolute>"; };
 		18D3858F204CE81100BA1977 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		18D38590204CE81100BA1977 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		18D38591204CE81100BA1977 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -256,9 +258,9 @@
 		18E623531F720C4F00D9B975 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		18E726781F76396E002B62C6 /* LSRockingBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSRockingBarView.h; sourceTree = "<group>"; };
 		18E726791F76396E002B62C6 /* LSRockingBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSRockingBarView.m; sourceTree = "<group>"; };
-		2B116AD3D9F845C92DAF50DC /* Pods_BL_BaseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BL_BaseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5461D815A4660897E6DE7E28 /* Pods-BL_BaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BL_BaseApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BL_BaseApp/Pods-BL_BaseApp.debug.xcconfig"; sourceTree = "<group>"; };
 		649F60BF375F153DC7FCAD31 /* Pods-BL_BaseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BL_BaseApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BL_BaseApp/Pods-BL_BaseApp.release.xcconfig"; sourceTree = "<group>"; };
+		A2E91D88E97FFDCBB5A2B5A3 /* libPods-BL_BaseApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BL_BaseApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0623881DFA550E007A25B6 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
 		EC0623891DFA550E007A25B6 /* CSAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAnimation.h; sourceTree = "<group>"; };
 		EC06238A1DFA550E007A25B6 /* CSAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAnimation.m; sourceTree = "<group>"; };
@@ -459,7 +461,7 @@
 				ECFB0AB81E763A410090AE71 /* jcore-ios-1.1.1.a in Frameworks */,
 				F32228D41D8FDDE600283270 /* UserNotifications.framework in Frameworks */,
 				ECFB0AB91E763A410090AE71 /* jpush-ios-3.0.2.a in Frameworks */,
-				8DF821B2EFE323FE1FA53CB6 /* Pods_BL_BaseApp.framework in Frameworks */,
+				40369CB8BC86D1A68B8AA2EE /* libPods-BL_BaseApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +489,17 @@
 				180E5D452153573E00540538 /* YINPlistTool.m */,
 			);
 			path = PlistTool;
+			sourceTree = "<group>";
+		};
+		181056F4216080DC00AA6906 /* YINMapping */ = {
+			isa = PBXGroup;
+			children = (
+				181056F5216080DC00AA6906 /* YINBindObj.m */,
+				181056F6216080DC00AA6906 /* NSObject+YINMapping.h */,
+				181056F7216080DC00AA6906 /* YINBindObj.h */,
+				181056F8216080DC00AA6906 /* NSObject+YINMapping.m */,
+			);
+			path = YINMapping;
 			sourceTree = "<group>";
 		};
 		1813D3041F73A31B00D835E0 /* BolaaCarController */ = {
@@ -607,17 +620,6 @@
 				189E6C3E215B87D500D70E03 /* YINUI.h */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		18A0F92D215CB871002C9531 /* MapingKit */ = {
-			isa = PBXGroup;
-			children = (
-				18A0F92E215CB8BD002C9531 /* NSObject+YINMapping.h */,
-				18A0F92F215CB8BD002C9531 /* NSObject+YINMapping.m */,
-				18A0F935215F13DF002C9531 /* YINBindObj.h */,
-				18A0F936215F13E0002C9531 /* YINBindObj.m */,
-			);
-			path = MapingKit;
 			sourceTree = "<group>";
 		};
 		18D3858E204CE81100BA1977 /* GCDSocketTool */ = {
@@ -807,6 +809,7 @@
 		ECD093C81ECD82380021F338 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
+				187EB6871F050A3C00DDD40A /* Manage */,
 				ECD093CC1ECD824B0021F338 /* YINModel.h */,
 				ECD093CD1ECD824B0021F338 /* YINModel.m */,
 			);
@@ -862,7 +865,7 @@
 				F32228D51D8FDDF300283270 /* AdSupport.framework */,
 				F32228D31D8FDDE600283270 /* UserNotifications.framework */,
 				18630E641FE20A1F005B8502 /* UserNotificationsUI.framework */,
-				2B116AD3D9F845C92DAF50DC /* Pods_BL_BaseApp.framework */,
+				A2E91D88E97FFDCBB5A2B5A3 /* libPods-BL_BaseApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -926,7 +929,6 @@
 				F3D2BC601D3F4D2900925002 /* Products */,
 				F32228D21D8FDDE500283270 /* Frameworks */,
 				E24CA802B57D02C542F0708C /* Pods */,
-				18C585C4215378CC00770958 /* BL_BaseAppDEV.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -987,11 +989,10 @@
 		F3D2BC961D3F4FB500925002 /* YINAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				181056F4216080DC00AA6906 /* YINMapping */,
 				F3D2BCD61D3F574D00925002 /* NetWork */,
-				18A0F92D215CB871002C9531 /* MapingKit */,
 				189E6C3A215B709500D70E03 /* View */,
 				EC428B151F4444F10071510C /* ViewModel */,
-				187EB6871F050A3C00DDD40A /* Manage */,
 				ECD093C11ECD82380021F338 /* Controller */,
 				ECD093C81ECD82380021F338 /* MODEL */,
 				F3AA21221D4395D000213ACF /* WFirstVC.h */,
@@ -1059,6 +1060,8 @@
 				F35FAFD31D7D499500D2907E /* NSString+Password.h */,
 				F35FAFD41D7D499500D2907E /* NSString+Password.m */,
 				F3A92DAA1D41F97500F36CD0 /* BL_NetHeader.h */,
+				18105701216D8F7500AA6906 /* NETWorkConfig.h */,
+				18105702216D8F7500AA6906 /* NETWorkConfig.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -1160,7 +1163,7 @@
 				F3D2BC5C1D3F4D2900925002 /* Frameworks */,
 				F3D2BC5D1D3F4D2900925002 /* Resources */,
 				18630E701FE20A1F005B8502 /* Embed App Extensions */,
-				EEF8205EB99E95A1E9648CDA /* [CP] Embed Pods Frameworks */,
+				57E0CA14031FA9830B3B23CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1329,42 +1332,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EEF8205EB99E95A1E9648CDA /* [CP] Embed Pods Frameworks */ = {
+		57E0CA14031FA9830B3B23CE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BL_BaseApp/Pods-BL_BaseApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/JRDB/JRDB.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TMCache/TMCache.framework",
-				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-BL_BaseApp/Pods-BL_BaseApp-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JRDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TMCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BL_BaseApp/Pods-BL_BaseApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BL_BaseApp/Pods-BL_BaseApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1389,7 +1374,6 @@
 				ECC6FCD11EC45036004FE41B /* UIViewController+MMDrawerController.m in Sources */,
 				F3D2BDFB1D3F5A7500925002 /* UIColor+Extension.m in Sources */,
 				F3AA21611D43C0CF00213ACF /* UIView+frame.m in Sources */,
-				18A0F930215CB8BD002C9531 /* NSObject+YINMapping.m in Sources */,
 				EC06239F1DFA550E007A25B6 /* CSBlurView.m in Sources */,
 				EC329E371E28C5B600894989 /* UIImage+YTZEqualImage.m in Sources */,
 				186CB5641FFC7A0E00D4D9BE /* YINScrollView.m in Sources */,
@@ -1402,6 +1386,7 @@
 				F35FAFD61D7D499500D2907E /* NSString+Password.m in Sources */,
 				EC0623A91DFA5975007A25B6 /* UIView+Canvas.m in Sources */,
 				ECD093CA1ECD82380021F338 /* BLBaseViewController.m in Sources */,
+				181056FA216080DC00AA6906 /* NSObject+YINMapping.m in Sources */,
 				F3D2BDFA1D3F5A7500925002 /* NSString+Help.m in Sources */,
 				184F45691FF0A1A80015921F /* YINAlert.m in Sources */,
 				F3D2BDFE1D3F5A7500925002 /* UIViewController+HRAlertViewController.m in Sources */,
@@ -1423,6 +1408,7 @@
 				F3D2BC671D3F4D2900925002 /* AppDelegate.m in Sources */,
 				180E5D462153573E00540538 /* YINPlistTool.m in Sources */,
 				F389D9BE1D44608500476C23 /* XHLaunchAd.m in Sources */,
+				181056F9216080DC00AA6906 /* YINBindObj.m in Sources */,
 				EC329E381E28C5B600894989 /* YTZImageRecognition.m in Sources */,
 				EC0623A11DFA550E007A25B6 /* UIButton+TCCustomFont.m in Sources */,
 				18C584F621536C2C00770958 /* LHDemoViewController.m in Sources */,
@@ -1444,12 +1430,12 @@
 				F385F5081D630A8400028BAA /* UIWebView+BLSize.m in Sources */,
 				ECCC23351E77C4EB00B99654 /* AJPhotoGroupView.m in Sources */,
 				ECCC23341E77C4EB00B99654 /* AJPhotoGroupCell.m in Sources */,
+				18105703216D8F7500AA6906 /* NETWorkConfig.m in Sources */,
 				F3AA21601D43C0CF00213ACF /* HUToast.m in Sources */,
 				ECD093CB1ECD82380021F338 /* BLWebViewController.m in Sources */,
 				F345A8071D91280800BB9142 /* YINWebViewController.m in Sources */,
 				F34B000C1DBF0A0F00C34FED /* UIFont+PX.m in Sources */,
 				1813D3081F73A34100D835E0 /* BLCarController.m in Sources */,
-				18A0F937215F13E0002C9531 /* YINBindObj.m in Sources */,
 				F3AA21541D43C0CF00213ACF /* HUPhotoBrowserCell.m in Sources */,
 				EC6E9FA51F4688EA002B313B /* UserModel.m in Sources */,
 				F3D2BDE91D3F5A4700925002 /* TextCheckManager.m in Sources */,

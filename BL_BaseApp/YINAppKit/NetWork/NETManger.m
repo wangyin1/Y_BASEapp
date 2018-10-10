@@ -12,7 +12,7 @@
 #import "NSString+Password.h"
 #import "AFNetworkReachabilityManager+IPV6.h"
 #import "YINPlistTool.h"
-
+#import "NETWorkConfig.h"
 
 NSString *const HttpCacheArrayKey = @"HttpCacheArrayKey_wy";
 NSString *const HttpPasswordKey = @"GUIDKey_wy";
@@ -31,45 +31,36 @@ NSString *const HttpPasswordKey = @"GUIDKey_wy";
 
 //这里根据项目需要做相应改动
 - (NSString *)netUrlWithMethodUrl:(NSString *)url{
-    return url;
+    return [[NETWorkConfig shareInstace] netUrlWithMethodUrl:url];
 //    return [NSString stringWithFormat:@"%@/%@",BASEURL,url];
 }
 
 //在这里平接全局参数
 - (NSDictionary *)parmWithBaseParm:(NSDictionary *)base{
-    NSMutableDictionary *muDic = [NSMutableDictionary dictionaryWithDictionary:base];
+//    NSMutableDictionary *muDic = [NSMutableDictionary dictionaryWithDictionary:base];
 //    [muDic setObject:@"testvalue" forKey:@"testkey"];
-    return muDic;
+    return [[NETWorkConfig shareInstace] parmWithBaseParm:base];
+//    return muDic;
 }
 
 //这里根据项目需要做相应改动
 - (id)callBackWithData:(id)responseObject Url:(NSString *)url Block:(NETsucess)block{
     NSLog(@"%@",responseObject);
-    BOOL  sucees = YES;//逻辑判断 是否成功
-    if ([responseObject[@"code"] integerValue]==300) {
-        //登录失效
-        sucees = NO;
-    }else if ([responseObject[@"code"] integerValue]==100){
-        sucees = YES;
-    }else if([responseObject[@"code"] integerValue]==400){
-        sucees = NO;
-    }else if ([responseObject[@"code"] integerValue]==200){//成功
-        sucees = YES;
-    }
+    YINNetCallBackData  *callBackData  = [[NETWorkConfig shareInstace] callBackWithData:responseObject];
     
-    if (sucees) {
+    if (callBackData.ok) {
         if (block) {
-            block(NETApiSucess,@"成功",responseObject[@"data"]);
+            block(NETApiSucess,@"成功",callBackData.data);
         }else if (self.delegate&&[self.delegate respondsToSelector:@selector(nETManger:Url:SucessWithData:)]){
-            [self.delegate nETManger:self Url:url SucessWithData:responseObject[@"data"]];
+            [self.delegate nETManger:self Url:url SucessWithData:callBackData.data];
         }
-        return responseObject[@"data"];
+        return callBackData.data;
     }else{
         if (block) {
-            block(NETApiFalied,@"失败",responseObject[@"data"]);
+            block(NETApiFalied,@"失败",callBackData.data);
         }else{
             if (self.delegate&&[self.delegate respondsToSelector:@selector(nETManger:Url:FalierWithData:Reason:)]) {
-                [self.delegate nETManger:self  Url:url FalierWithData:responseObject[@"data"] Reason:@"原因 一般读取后端数据"];
+                [self.delegate nETManger:self  Url:url FalierWithData:callBackData.data Reason:callBackData.message];
             }
         }
     }

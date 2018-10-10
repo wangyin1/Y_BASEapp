@@ -1,6 +1,6 @@
 platform :ios, '9.0'
 target 'BL_BaseApp' do
-use_frameworks!
+#use_frameworks!
 
         pod 'AFNetworking','~> 2.2.0'
         pod 'Masonry'
@@ -12,5 +12,6 @@ use_frameworks!
         pod 'MBProgressHUD'
         pod 'JRDB'
         pod 'iCarousel'
+        pod 'ReactiveObjC'
         
 end

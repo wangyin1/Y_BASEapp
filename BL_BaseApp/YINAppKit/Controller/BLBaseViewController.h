@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MJRefresh.h"
+
 #import "MBProgressHUD.h"
 #import "AFNetworkReachabilityManager.h"
 
