@@ -59,12 +59,29 @@ static NSString *alertKey = @"yinalertKey";
     
 }
 
++ (void)dismissFor:(UIView *)view;{
+    
+    if ([view.superview isKindOfClass:self]) {
+        [(YINAlert *)view.superview dismissAnmation:[(YINAlert *)view.superview dismisAnimation]];
+    }else{
+        [view removeFromSuperview];
+    }
+    
+}
+
++ (void)dismissFor:(UIView *)view Anmation:(YINAlertShowAnimation)animationType;{
+    if ([view.superview isKindOfClass:self]) {
+        [(YINAlert *)view.superview dismissAnmation:animationType];
+    }else{
+        [view removeFromSuperview];
+    }
+}
+
 - (void)resetFrame:(YINAlertShowAnimation)type{
     
     switch (type) {
         case YINAlertShowAnimationFade:
             self.contentView.alpha = 0.2;
-            
             break;
         case YINAlertShowAnimationFromUp:
             self.contentView.frame = CGRectMake(self.contentView.frame.origin.x, - self.contentView.frame.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height);
@@ -73,10 +90,10 @@ static NSString *alertKey = @"yinalertKey";
             self.contentView.frame = CGRectMake(self.contentView.frame.origin.x, self.allView.frame.size.height, self.contentView.frame.size.width, self.contentView.frame.size.height);
             break;
         case YINAlertShowAnimationFromLeft:
-            self.contentView.frame = CGRectMake(-self.contentView.frame.origin.x, self.contentView.frame.origin.y, self.contentView.frame.size.width, self.contentView.frame.size.height);
+            self.contentView.frame = CGRectMake(-self.contentView.frame.size.width, self.contentView.frame.origin.y, self.contentView.frame.size.width, self.contentView.frame.size.height);
             break;
         case YINAlertShowAnimationFromRight:
-            self.contentView.frame = CGRectMake(self.allView.frame.origin.x, self.contentView.frame.origin.y, self.contentView.frame.size.width, self.contentView.frame.size.height);
+            self.contentView.frame = CGRectMake(self.allView.bounds.size.width, self.contentView.frame.origin.y, self.contentView.frame.size.width, self.contentView.frame.size.height);
             break;
             
         case YINAlertShowAnimationZoomSale:
@@ -105,7 +122,7 @@ static NSString *alertKey = @"yinalertKey";
     switch (self.animationType) {
         case YINAlertShowAnimationFade:
         {
-            [UIView animateWithDuration:.3 animations:^{
+            [UIView animateWithDuration:.4 animations:^{
                 self.contentView.alpha = 1;
             }];
            
@@ -116,7 +133,6 @@ static NSString *alertKey = @"yinalertKey";
             [UIView animateWithDuration:.3 animations:^{
                 self.contentView.transform = CGAffineTransformMakeScale(1, 1);
             }];
-            
         }
             break;
             
@@ -124,6 +140,7 @@ static NSString *alertKey = @"yinalertKey";
             [UIView animateWithDuration:.3 animations:^{
                 self.contentView.frame = self.toFrame;
             }];
+//            [self shake];
         }
             break;
     }
@@ -131,9 +148,34 @@ static NSString *alertKey = @"yinalertKey";
     [UIView animateWithDuration:.3 animations:^{
        self.allView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.5];
     }];
-
+   
 }
 
+
+- (void)shake{
+    CGFloat duration = 0.2;
+    UIView *aview = self.contentView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        aview.transform = CGAffineTransformMakeScale(1, 1);
+        [UIView animateKeyframesWithDuration:duration/3 delay:0 options:0 animations:^{
+            // End
+            aview.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        } completion:^(BOOL finished) {
+            [UIView animateKeyframesWithDuration:duration/3 delay:0 options:0 animations:^{
+                // End
+                aview.transform = CGAffineTransformMakeScale(0.9, 0.9);
+            } completion:^(BOOL finished) {
+                [UIView animateKeyframesWithDuration:duration/3 delay:0 options:0 animations:^{
+                    // End
+                    aview.transform = CGAffineTransformMakeScale(1, 1);
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }];
+        }];
+        
+    });
+}
 
 
 - (void)showInView:(UIView *)view Animation:(YINAlertShowAnimation)animationType;{
@@ -150,6 +192,9 @@ static NSString *alertKey = @"yinalertKey";
     }completion:^(BOOL finished) {
         objc_setAssociatedObject(self.allView.superview, &alertKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         [self.allView removeFromSuperview];
+        _contentView.transform = CGAffineTransformMakeScale(1, 1);
+
+        _contentView.frame = _toFrame;
     }];
 }
 
@@ -160,6 +205,7 @@ static NSString *alertKey = @"yinalertKey";
     [self dismiss];
 }
 
+
 + (instancetype)showYinAlertWithContent:(UIView *)contentView InSuperView:(UIView *)superView AnimationType:(YINAlertShowAnimation)animationType{
     
     YINAlert *alert = [[YINAlert alloc] init];
@@ -169,7 +215,6 @@ static NSString *alertKey = @"yinalertKey";
     if (superView) {
         [alert showInView:superView];
     }
-    
     return alert;
 }
 

@@ -13,5 +13,5 @@ target 'BL_BaseApp' do
         pod 'JRDB'
         pod 'iCarousel'
         pod 'ReactiveObjC'
-        
+        pod 'TZImagePickerController'
 end

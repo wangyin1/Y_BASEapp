@@ -76,6 +76,6 @@ typedef void(^YINSocketEventBlock)(YINSocketEventStatus status,id socket,NSStrin
 
 
 //
-//加入一个组 发送消息时组内所有成员都能收到消息 需要传一个ip不需要端口
+////加入一个组 发送消息时组内所有成员都能收到消息 需要传一个ip不需要端口
 //- (BOOL)udpJoinGroup:(NSString *)ip;
 @end

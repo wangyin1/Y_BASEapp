@@ -134,6 +134,7 @@
 }
 
 
+
 //---------------------------如果要使用极光推送，请打开此段代码---------------------------
 //- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
 //    [JPUSHService registerDeviceToken:deviceToken];

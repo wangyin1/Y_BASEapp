@@ -6,6 +6,7 @@
 //  Copyright © 2018年 王印. All rights reserved.
 //
 
+//#import "UIView+Canvas.h"
 #import "YINLoadingButton.h"
 
 @interface YINLoadingButton()
@@ -93,9 +94,12 @@
     }
     return self;
 }
+//- (void)yinLoadingBtnClick{
+//    
+//}
 
 - (void)setUpview{
-    
+  
     [self addSubview:self.circleView];
     [self.circleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.titleLabel.mas_left).offset(-8);
@@ -103,7 +107,8 @@
         make.height.equalTo(@(MIN(25, self.bounds.size.height-6)));
         make.width.equalTo(@(MIN(25, self.bounds.size.height-6)));
     }];
-  
+    
+//    [self addTarget:self action:@selector(yinLoadingBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (UIView *)circleView{

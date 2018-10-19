@@ -62,16 +62,6 @@ typedef void(^NETsucess)(NETApiStatus status,NSString *message,id object);
 @property(nonatomic,readonly) AFHTTPRequestOperationManager *httpRequestManager;
 
 
-//------------------------------------自定义start-------------------
-//这里根据项目需要做相应改动
-//拼接地址
-- (NSString *)netUrlWithMethodUrl:(NSString *)url;
-//在这里平接全局参数
-- (NSDictionary *)parmWithBaseParm:(NSDictionary *)base;
-//实现回调
-- (id)callBackWithData:(id)responseObject Url:(NSString *)url Block:(NETsucess)block;
-//------------------------------------自定义end-------------------
-
 
 //如果不传block 则走delegate方法回调
 + (void)requstUrl:(NSString *)url WithParm:(NSDictionary *)parm Block:(NETsucess)block;

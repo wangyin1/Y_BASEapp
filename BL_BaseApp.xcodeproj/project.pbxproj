@@ -10,8 +10,6 @@
 		180E5D462153573E00540538 /* YINPlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E5D452153573E00540538 /* YINPlistTool.m */; };
 		180E5D492153593300540538 /* AFNetworkReachabilityManager+IPV6.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E5D482153593300540538 /* AFNetworkReachabilityManager+IPV6.m */; };
 		180E5D4C21535E3200540538 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E5D4B21535E3200540538 /* MBProgressHUD+MJ.m */; };
-		181056F9216080DC00AA6906 /* YINBindObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 181056F5216080DC00AA6906 /* YINBindObj.m */; };
-		181056FA216080DC00AA6906 /* NSObject+YINMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 181056F8216080DC00AA6906 /* NSObject+YINMapping.m */; };
 		18105703216D8F7500AA6906 /* NETWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18105702216D8F7500AA6906 /* NETWorkConfig.m */; };
 		1813D3081F73A34100D835E0 /* BLCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813D3061F73A34100D835E0 /* BLCarController.m */; };
 		1813D3091F73A34100D835E0 /* BLCarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1813D3071F73A34100D835E0 /* BLCarController.xib */; };
@@ -58,7 +56,6 @@
 		EC0623A61DFA550E007A25B6 /* UITextView+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EC06239C1DFA550E007A25B6 /* UITextView+TCCustomFont.m */; };
 		EC0623A91DFA5975007A25B6 /* UIView+Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0623A81DFA5975007A25B6 /* UIView+Canvas.m */; };
 		EC1003B81F53C780002D8B9D /* YTZMainColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E351E28C5B600894989 /* YTZMainColour.m */; };
-		EC1003BA1F53C93F002D8B9D /* AJPhotoListCellTapView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23231E77C4EB00B99654 /* AJPhotoListCellTapView.m */; };
 		EC2339FC1E7A361700E17089 /* UIView+YinBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2339FB1E7A361700E17089 /* UIView+YinBorder.m */; };
 		EC329E361E28C5B600894989 /* UIColor+YTZGetColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E2B1E28C5B600894989 /* UIColor+YTZGetColour.m */; };
 		EC329E371E28C5B600894989 /* UIImage+YTZEqualImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC329E2D1E28C5B600894989 /* UIImage+YTZEqualImage.m */; };
@@ -77,13 +74,6 @@
 		ECC6FCCF1EC45036004FE41B /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC6FCC91EC45036004FE41B /* MMDrawerController.m */; };
 		ECC6FCD01EC45036004FE41B /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC6FCCB1EC45036004FE41B /* MMDrawerVisualState.m */; };
 		ECC6FCD11EC45036004FE41B /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC6FCCD1EC45036004FE41B /* UIViewController+MMDrawerController.m */; };
-		ECCC23331E77C4EB00B99654 /* AJGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC231B1E77C4EB00B99654 /* AJGradientView.m */; };
-		ECCC23341E77C4EB00B99654 /* AJPhotoGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC231D1E77C4EB00B99654 /* AJPhotoGroupCell.m */; };
-		ECCC23351E77C4EB00B99654 /* AJPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC231F1E77C4EB00B99654 /* AJPhotoGroupView.m */; };
-		ECCC23361E77C4EB00B99654 /* AJPhotoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23211E77C4EB00B99654 /* AJPhotoListCell.m */; };
-		ECCC23381E77C4EB00B99654 /* AJPhotoListView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23251E77C4EB00B99654 /* AJPhotoListView.m */; };
-		ECCC23391E77C4EB00B99654 /* AJPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCC23271E77C4EB00B99654 /* AJPhotoPickerViewController.m */; };
-		ECCC233A1E77C4EB00B99654 /* BoPhotoPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECCC23281E77C4EB00B99654 /* BoPhotoPicker.bundle */; };
 		ECD093C91ECD82380021F338 /* BaseTabarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD093C31ECD82380021F338 /* BaseTabarController.m */; };
 		ECD093CA1ECD82380021F338 /* BLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD093C51ECD82380021F338 /* BLBaseViewController.m */; };
 		ECD093CB1ECD82380021F338 /* BLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD093C71ECD82380021F338 /* BLWebViewController.m */; };
@@ -200,10 +190,6 @@
 		180E5D482153593300540538 /* AFNetworkReachabilityManager+IPV6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFNetworkReachabilityManager+IPV6.m"; sourceTree = "<group>"; };
 		180E5D4A21535E3200540538 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		180E5D4B21535E3200540538 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		181056F5216080DC00AA6906 /* YINBindObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YINBindObj.m; sourceTree = "<group>"; };
-		181056F6216080DC00AA6906 /* NSObject+YINMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YINMapping.h"; sourceTree = "<group>"; };
-		181056F7216080DC00AA6906 /* YINBindObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YINBindObj.h; sourceTree = "<group>"; };
-		181056F8216080DC00AA6906 /* NSObject+YINMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YINMapping.m"; sourceTree = "<group>"; };
 		18105701216D8F7500AA6906 /* NETWorkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NETWorkConfig.h; sourceTree = "<group>"; };
 		18105702216D8F7500AA6906 /* NETWorkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NETWorkConfig.m; sourceTree = "<group>"; };
 		1813D3051F73A34100D835E0 /* BLCarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCarController.h; sourceTree = "<group>"; };
@@ -216,7 +202,6 @@
 		1840BEAB2048DEAA004B835F /* YINSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YINSocketViewController.h; sourceTree = "<group>"; };
 		1840BEAC2048DEAA004B835F /* YINSocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YINSocketViewController.m; sourceTree = "<group>"; };
 		1840BEAD2048DEAA004B835F /* YINSocketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YINSocketViewController.xib; sourceTree = "<group>"; };
-		184A8C331EFB5BFD003604D5 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		184F45671FF0A1A80015921F /* YINAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YINAlert.h; sourceTree = "<group>"; };
 		184F45681FF0A1A80015921F /* YINAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YINAlert.m; sourceTree = "<group>"; };
 		185DEBF61F7104180055015C /* KeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChain.h; sourceTree = "<group>"; };
@@ -322,21 +307,6 @@
 		ECC6FCCB1EC45036004FE41B /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
 		ECC6FCCC1EC45036004FE41B /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		ECC6FCCD1EC45036004FE41B /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		ECCC231A1E77C4EB00B99654 /* AJGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJGradientView.h; sourceTree = "<group>"; };
-		ECCC231B1E77C4EB00B99654 /* AJGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJGradientView.m; sourceTree = "<group>"; };
-		ECCC231C1E77C4EB00B99654 /* AJPhotoGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoGroupCell.h; sourceTree = "<group>"; };
-		ECCC231D1E77C4EB00B99654 /* AJPhotoGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoGroupCell.m; sourceTree = "<group>"; };
-		ECCC231E1E77C4EB00B99654 /* AJPhotoGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoGroupView.h; sourceTree = "<group>"; };
-		ECCC231F1E77C4EB00B99654 /* AJPhotoGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoGroupView.m; sourceTree = "<group>"; };
-		ECCC23201E77C4EB00B99654 /* AJPhotoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoListCell.h; sourceTree = "<group>"; };
-		ECCC23211E77C4EB00B99654 /* AJPhotoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoListCell.m; sourceTree = "<group>"; };
-		ECCC23221E77C4EB00B99654 /* AJPhotoListCellTapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoListCellTapView.h; sourceTree = "<group>"; };
-		ECCC23231E77C4EB00B99654 /* AJPhotoListCellTapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoListCellTapView.m; sourceTree = "<group>"; };
-		ECCC23241E77C4EB00B99654 /* AJPhotoListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoListView.h; sourceTree = "<group>"; };
-		ECCC23251E77C4EB00B99654 /* AJPhotoListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoListView.m; sourceTree = "<group>"; };
-		ECCC23261E77C4EB00B99654 /* AJPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPhotoPickerViewController.h; sourceTree = "<group>"; };
-		ECCC23271E77C4EB00B99654 /* AJPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoPickerViewController.m; sourceTree = "<group>"; };
-		ECCC23281E77C4EB00B99654 /* BoPhotoPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BoPhotoPicker.bundle; sourceTree = "<group>"; };
 		ECD093C21ECD82380021F338 /* BaseTabarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabarController.h; sourceTree = "<group>"; };
 		ECD093C31ECD82380021F338 /* BaseTabarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabarController.m; sourceTree = "<group>"; };
 		ECD093C41ECD82380021F338 /* BLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLBaseViewController.h; sourceTree = "<group>"; };
@@ -491,17 +461,6 @@
 			path = PlistTool;
 			sourceTree = "<group>";
 		};
-		181056F4216080DC00AA6906 /* YINMapping */ = {
-			isa = PBXGroup;
-			children = (
-				181056F5216080DC00AA6906 /* YINBindObj.m */,
-				181056F6216080DC00AA6906 /* NSObject+YINMapping.h */,
-				181056F7216080DC00AA6906 /* YINBindObj.h */,
-				181056F8216080DC00AA6906 /* NSObject+YINMapping.m */,
-			);
-			path = YINMapping;
-			sourceTree = "<group>";
-		};
 		1813D3041F73A31B00D835E0 /* BolaaCarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,24 +511,6 @@
 				185DEBF71F7104180055015C /* KeyChain.m */,
 			);
 			path = KeyChain;
-			sourceTree = "<group>";
-		};
-		186020531EFA07BD009B8A29 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				F3D2BCD71D3F574D00925002 /* Utils */,
-				F3D2BCD51D3F574D00925002 /* Categories */,
-				186020541EFA081A009B8A29 /* Setting */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		186020541EFA081A009B8A29 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				184A8C331EFB5BFD003604D5 /* Setting.h */,
-			);
-			path = Setting;
 			sourceTree = "<group>";
 		};
 		18630E661FE20A1F005B8502 /* com.bolaa.BL-BaseAppNotificationExtention */ = {
@@ -751,29 +692,14 @@
 			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
-		ECCC23191E77C4EB00B99654 /* AJPhotoPicker */ = {
+		ECCC23191E77C4EB00B99654 /* YINPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				ECCC231A1E77C4EB00B99654 /* AJGradientView.h */,
-				ECCC231B1E77C4EB00B99654 /* AJGradientView.m */,
-				ECCC231C1E77C4EB00B99654 /* AJPhotoGroupCell.h */,
-				ECCC231D1E77C4EB00B99654 /* AJPhotoGroupCell.m */,
-				ECCC231E1E77C4EB00B99654 /* AJPhotoGroupView.h */,
-				ECCC231F1E77C4EB00B99654 /* AJPhotoGroupView.m */,
-				ECCC23201E77C4EB00B99654 /* AJPhotoListCell.h */,
-				ECCC23211E77C4EB00B99654 /* AJPhotoListCell.m */,
-				ECCC23221E77C4EB00B99654 /* AJPhotoListCellTapView.h */,
-				ECCC23231E77C4EB00B99654 /* AJPhotoListCellTapView.m */,
-				ECCC23241E77C4EB00B99654 /* AJPhotoListView.h */,
-				ECCC23251E77C4EB00B99654 /* AJPhotoListView.m */,
-				ECCC23261E77C4EB00B99654 /* AJPhotoPickerViewController.h */,
-				ECCC23271E77C4EB00B99654 /* AJPhotoPickerViewController.m */,
-				ECCC23281E77C4EB00B99654 /* BoPhotoPicker.bundle */,
 				ECCC23291E77C4EB00B99654 /* Vendor */,
 				ECA1BB722057B5E000BAEFB2 /* YINPhtoPicker.h */,
 				ECA1BB732057B5E000BAEFB2 /* YINPhtoPicker.m */,
 			);
-			path = AJPhotoPicker;
+			path = YINPhotoPicker;
 			sourceTree = "<group>";
 		};
 		ECCC23291E77C4EB00B99654 /* Vendor */ = {
@@ -950,7 +876,6 @@
 				F3D2BC651D3F4D2900925002 /* AppDelegate.h */,
 				F3D2BC661D3F4D2900925002 /* AppDelegate.m */,
 				F3D2BC961D3F4FB500925002 /* YINAppKit */,
-				186020531EFA07BD009B8A29 /* Common */,
 				F3D2BC971D3F50BD00925002 /* Classes */,
 				F3D2BC701D3F4D2900925002 /* LaunchScreen.storyboard */,
 				F3D2BC731D3F4D2900925002 /* Info.plist */,
@@ -989,7 +914,8 @@
 		F3D2BC961D3F4FB500925002 /* YINAppKit */ = {
 			isa = PBXGroup;
 			children = (
-				181056F4216080DC00AA6906 /* YINMapping */,
+				F3D2BCD51D3F574D00925002 /* Categories */,
+				F3D2BCD71D3F574D00925002 /* Utils */,
 				F3D2BCD61D3F574D00925002 /* NetWork */,
 				189E6C3A215B709500D70E03 /* View */,
 				EC428B151F4444F10071510C /* ViewModel */,
@@ -1046,8 +972,7 @@
 				F34B000A1DBF0A0F00C34FED /* UIFont+PX.h */,
 				F34B000B1DBF0A0F00C34FED /* UIFont+PX.m */,
 			);
-			name = Categories;
-			path = ../Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		F3D2BCD61D3F574D00925002 /* NetWork */ = {
@@ -1076,7 +1001,7 @@
 				EC428B651F44481A0071510C /* Device */,
 				ECC6FCC41EC45036004FE41B /* MMDrawerController */,
 				EC60B2321E9B795700208764 /* runtimeKit（runtime） */,
-				ECCC23191E77C4EB00B99654 /* AJPhotoPicker */,
+				ECCC23191E77C4EB00B99654 /* YINPhotoPicker */,
 				EC329E291E28C5B600894989 /* YTZImageComparison */,
 				EC0623871DFA550E007A25B6 /* CanvasLibrary */,
 				EC5642411DF95DDE0058871B /* Aspects */,
@@ -1238,6 +1163,9 @@
 							com.apple.Push = {
 								enabled = 0;
 							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
 						};
 					};
 					F3D2BC771D3F4D2900925002 = {
@@ -1284,7 +1212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECCC233A1E77C4EB00B99654 /* BoPhotoPicker.bundle in Resources */,
 				EC6E9FA21F468804002B313B /* LoginViewController.xib in Resources */,
 				F3D2BD1F1D3F59AA00925002 /* html.txt in Resources */,
 				F3D2BC721D3F4D2900925002 /* LaunchScreen.storyboard in Resources */,
@@ -1341,11 +1268,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BL_BaseApp/Pods-BL_BaseApp-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1367,7 +1296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1003BA1F53C93F002D8B9D /* AJPhotoListCellTapView.m in Sources */,
 				EC1003B81F53C780002D8B9D /* YTZMainColour.m in Sources */,
 				EC60B2351E9B795700208764 /* runtimeKit.m in Sources */,
 				ECD093CE1ECD824B0021F338 /* YINModel.m in Sources */,
@@ -1386,7 +1314,6 @@
 				F35FAFD61D7D499500D2907E /* NSString+Password.m in Sources */,
 				EC0623A91DFA5975007A25B6 /* UIView+Canvas.m in Sources */,
 				ECD093CA1ECD82380021F338 /* BLBaseViewController.m in Sources */,
-				181056FA216080DC00AA6906 /* NSObject+YINMapping.m in Sources */,
 				F3D2BDFA1D3F5A7500925002 /* NSString+Help.m in Sources */,
 				184F45691FF0A1A80015921F /* YINAlert.m in Sources */,
 				F3D2BDFE1D3F5A7500925002 /* UIViewController+HRAlertViewController.m in Sources */,
@@ -1408,12 +1335,10 @@
 				F3D2BC671D3F4D2900925002 /* AppDelegate.m in Sources */,
 				180E5D462153573E00540538 /* YINPlistTool.m in Sources */,
 				F389D9BE1D44608500476C23 /* XHLaunchAd.m in Sources */,
-				181056F9216080DC00AA6906 /* YINBindObj.m in Sources */,
 				EC329E381E28C5B600894989 /* YTZImageRecognition.m in Sources */,
 				EC0623A11DFA550E007A25B6 /* UIButton+TCCustomFont.m in Sources */,
 				18C584F621536C2C00770958 /* LHDemoViewController.m in Sources */,
 				EC329E361E28C5B600894989 /* UIColor+YTZGetColour.m in Sources */,
-				ECCC23361E77C4EB00B99654 /* AJPhotoListCell.m in Sources */,
 				18A0F934215DDB11002C9531 /* YINPerson.m in Sources */,
 				F320BB181D6713D700C65367 /* LFUIView+Add.m in Sources */,
 				EC6E9FA11F468804002B313B /* LoginViewController.m in Sources */,
@@ -1428,8 +1353,6 @@
 				ECC6FCCE1EC45036004FE41B /* MMDrawerBarButtonItem.m in Sources */,
 				ECA1BB742057B5E000BAEFB2 /* YINPhtoPicker.m in Sources */,
 				F385F5081D630A8400028BAA /* UIWebView+BLSize.m in Sources */,
-				ECCC23351E77C4EB00B99654 /* AJPhotoGroupView.m in Sources */,
-				ECCC23341E77C4EB00B99654 /* AJPhotoGroupCell.m in Sources */,
 				18105703216D8F7500AA6906 /* NETWorkConfig.m in Sources */,
 				F3AA21601D43C0CF00213ACF /* HUToast.m in Sources */,
 				ECD093CB1ECD82380021F338 /* BLWebViewController.m in Sources */,
@@ -1441,7 +1364,6 @@
 				F3D2BDE91D3F5A4700925002 /* TextCheckManager.m in Sources */,
 				1840BEAE2048DEAA004B835F /* YINSocketViewController.m in Sources */,
 				F3AA21241D4395D000213ACF /* WFirstVC.m in Sources */,
-				ECCC23391E77C4EB00B99654 /* AJPhotoPickerViewController.m in Sources */,
 				182D087F215C79B30013CED0 /* YINTableView.m in Sources */,
 				EC0623A51DFA550E007A25B6 /* UITextField+TCCustomFont.m in Sources */,
 				EC5642441DF95DE90058871B /* Aspects.m in Sources */,
@@ -1453,7 +1375,6 @@
 				F3D2BC641D3F4D2900925002 /* main.m in Sources */,
 				ECC6FCD01EC45036004FE41B /* MMDrawerVisualState.m in Sources */,
 				F320BB141D670F5B00C65367 /* LFUIView+Badge.m in Sources */,
-				ECCC23381E77C4EB00B99654 /* AJPhotoListView.m in Sources */,
 				18D38594204CE81100BA1977 /* GCDAsyncSocket.m in Sources */,
 				F3CBA3F81D923C2300EC1467 /* UIView+NoData.m in Sources */,
 				18D38597204CEBB800BA1977 /* YINSocket.m in Sources */,
@@ -1461,7 +1382,6 @@
 				18630E811FE36D80005B8502 /* ZLCollectionViewFlowLayout.m in Sources */,
 				F3D2BDFC1D3F5A7500925002 /* UIImage+TOOL.m in Sources */,
 				EC428B681F44481E0071510C /* Device.m in Sources */,
-				ECCC23331E77C4EB00B99654 /* AJGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

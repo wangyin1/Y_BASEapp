@@ -42,11 +42,14 @@
 {
     self = [super init];
     if (self) {
+        //客户机数组
         self.tcpClients = @[].mutableCopy;
+        //断开自动重连次数
         self.autoConnect = 5;
     }
     return self;
 }
+
 
 - (void)setAutoConnect:(NSInteger)autoConnect{
     _autoConnect = autoConnect;
@@ -101,17 +104,21 @@
     }
 }
 
+//初始化一个tcp客户机管理工具
 + (instancetype)tcpSocket{
     YINSocket *tool = [[YINSocket alloc] init];
     tool.tcpClient = [[GCDAsyncSocket alloc] initWithDelegate:tool delegateQueue:dispatch_get_main_queue()];
     return tool;
 }
+
+//初始化一个服务机管理工具
 + (instancetype)tcpSocketService{
     YINSocket *tool = [[YINSocket alloc] init];
     tool.tcpService = [[GCDAsyncSocket alloc] initWithDelegate:tool delegateQueue:dispatch_get_main_queue()];
     return tool;
 }
 
+//初始化一个udpSocket管理工具
 + (instancetype)udpSocket{
     YINSocket *tool = [[YINSocket alloc] init];
     tool.udp = [[GCDAsyncUdpSocket alloc] initWithDelegate:tool delegateQueue:dispatch_get_main_queue()];
@@ -199,6 +206,7 @@
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
+    
     if (_connectCount>0&&self.tcpClient) {
         [self doAdutoConnect];
     }
@@ -218,7 +226,7 @@
     [newSocket readDataWithTimeout:-1 tag:0];
 }
 
-// 客户端已经获取到内容
+// 已经获取到内容
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
     NSString *content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];

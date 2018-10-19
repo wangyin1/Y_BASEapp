@@ -34,6 +34,7 @@ PODS:
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - TMCache (2.1.0)
+  - TZImagePickerController (3.0.8)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2.0)
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - ReactiveObjC
   - SDWebImage
   - TMCache
+  - TZImagePickerController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -62,6 +64,7 @@ SPEC REPOS:
     - ReactiveObjC
     - SDWebImage
     - TMCache
+    - TZImagePickerController
 
 SPEC CHECKSUMS:
   AFNetworking: caca0799b310f0c3bf1fc1af45145fc96972bcab
@@ -76,7 +79,8 @@ SPEC CHECKSUMS:
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  TZImagePickerController: 9092aa0f97af1cb9643c0ea7d7e5a77802ec7245
 
-PODFILE CHECKSUM: 24723bf0323e5d071bd5b782e9ab8c55ae32bcef
+PODFILE CHECKSUM: 39cbad7ec2681d221ed6f5946a073ec1f9e25b28
 
 COCOAPODS: 1.5.3

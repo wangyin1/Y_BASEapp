@@ -50,7 +50,8 @@ typedef NS_ENUM(NSUInteger, YINAlertShowAnimation) {
 
 + (instancetype)showYinAlertWithContent:(UIView *)contentView InSuperView:(UIView *)superView AnimationType:(YINAlertShowAnimation )animationType;
 
-
++ (void)dismissFor:(UIView *)view;
++ (void)dismissFor:(UIView *)view Anmation:(YINAlertShowAnimation)animationType;
 
 //system
 

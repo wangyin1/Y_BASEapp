@@ -8,11 +8,14 @@
 
 #import "LHDemoViewController.h"
 #import "iCarousel.h"
+#import "UIView+Canvas.h"
+#import "YINUI.h"
 #import "YINLoadingButton.h"
-#import "NSObject+YINMapping.h"
+//#import "NSObject+YINMapping.h"
 #import "YINPerson.h"
 #import "ReactiveObjC.h"
 @interface LHDemoViewController ()<iCarouselDelegate,iCarouselDataSource>
+@property (strong, nonatomic) IBOutlet UIView *alert;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet iCarousel *carousel;
 @property (strong,nonatomic) NSMutableArray  *dataSource;
@@ -23,6 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navLargeTitleMode = YES;
+    self.title = @"test";
     _carousel.dataSource = self;
     _carousel.delegate = self;
     _carousel.bounces = NO;
@@ -30,12 +36,20 @@
     _carousel.type = iCarouselTypeCustom;
     self.dataSource = @[@{@"title":@"aaaddd"},@{@"title":@"bbbbbb"},@{@"title":@"cccccc"},@{@"title":@"dddddd"},@{@"title":@"eeeeee"}].mutableCopy;
     [_carousel reloadData];
-    
+    self.label.canvasType = CSAnimationTypeMorph;
+    self.label.canvasDuration = 1;
+    self.label.canvasDelay= 2;
+    [self.label startCanvasAnimation];
+    self.alert.frame = CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds)-200)/2.f, (CGRectGetHeight([UIScreen mainScreen].bounds)-200)/2.f, 200, 200);
+
 //    [self.carousel y_addBind:[YINBindObj obj:self keyPath:@"dataSource"] Mapping:^(NSObject *bind,NSString *property) {
 //         [_carousel reloadData];
 //    }];
     
-    __weak typeof(self)weakSelf = self;
+        __weak typeof(self)weakSelf = self;
+    
+    
+    
     
     [[RACObserve(self, dataSource) filter:^BOOL(id  _Nullable value) {
         return  YES;
@@ -106,6 +120,10 @@
 }
 
 - (IBAction)click:(YINLoadingButton *)sender {
+    [YINAlert showYinAlertWithContent:self.alert InSuperView:self.view AnimationType:YINAlertShowAnimationFromRight];
+    [YINPhtoPicker choseWithMaxCount:8 controller:self getImagesBlock:^(NSArray<UIImage *> *images) {
+        
+    }];
     if (sender.isLoading) {
         [sender stopLoading];
     }else{
